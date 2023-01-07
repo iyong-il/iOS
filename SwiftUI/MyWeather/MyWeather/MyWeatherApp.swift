@@ -9,9 +9,29 @@ import SwiftUI
 
 @main
 struct MyWeatherApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      TabView {
+        MapView()
+          .tabItem {
+            Image(systemName: "map")
+          }
+
+        WeatherView()
+          .tabItem {
+            Image(systemName: "sun.max")
+          }
+
+        ListView()
+          .tabItem {
+            Image(systemName: "list.bullet")
+          }
+      }
+      .onAppear() {
+        UITabBar.appearance().backgroundColor = .clear
+        UITabBar.appearance().barTintColor = .black
+      }
     }
+  }
 }
+

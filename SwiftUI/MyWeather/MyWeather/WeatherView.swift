@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WeatherView: View {
   var body: some View {
     NavigationView {
       ZStack {
@@ -18,19 +18,21 @@ struct ContentView: View {
           //            .edgesIgnoringSafeArea(.all)
         }
         .ignoresSafeArea()
-
+        
         ScrollView {
           top
-          middle
+          middle1
+          middle2
           bottom
-        } // ScrollView
+        }
         .padding()
-
+        
       } // Zstack
     } // NavigationView
+    .foregroundColor(.white)
   }
-
-
+  
+  
   // MARK: - 컴포넌트
   fileprivate var top: some View {
     Group {
@@ -47,15 +49,36 @@ struct ContentView: View {
         }
         .font(.title3)
       } // Top
+      .padding(.vertical, 40)
     }
   }
-  fileprivate var middle: some View {
+  fileprivate var middle1: some View {
     Group {
-      VStack {
-        Text("오전 12시쯤 청명한 상태가 예상됩니다.")
-        Divider()
+      VStack(alignment: .leading) {
         HStack {
-          VStack {
+          Image(systemName: "aqi.high")
+          Text("대기질")
+          Spacer()
+        }
+        Text("매우나쁨")
+        Text("현재의 대기질 지수")
+      }
+      .padding()
+      .frame(maxWidth: .infinity)
+      .background(.ultraThinMaterial)
+      .cornerRadius(13)
+    }
+  }
+  fileprivate var middle2: some View {
+    Group {
+      VStack(alignment: .leading) {
+        HStack() {
+          Image(systemName: "clock")
+          Text("시간별 일기예보")
+          Spacer()
+        }
+        HStack {
+          VStack(alignment: .leading) {
             Text("지금")
             Image(systemName: "cloud.fill")
             Text("13°")
@@ -70,19 +93,21 @@ struct ContentView: View {
   }
   fileprivate var bottom: some View {
     Group {
-      VStack {
+      VStack(alignment: .leading) {
         HStack {
           Image(systemName: "calendar")
           Text("10일간의 일기예보")
         }
-        Divider()
         HStack {
-          VStack {
-            HStack {
+          VStack(alignment: .leading) {
+            Divider()
+            HStack(alignment: .center) {
               Text("오늘")
+              Spacer()
               Image(systemName: "cloud.fill")
+              Spacer()
               Text("최저")
-
+              Spacer()
               Text("최고")
             }
           }
@@ -92,14 +117,13 @@ struct ContentView: View {
       .background(.ultraThinMaterial)
       .cornerRadius(13)
     }
-
-
+    
   }
-
 }
+
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    WeatherView()
   }
 }
