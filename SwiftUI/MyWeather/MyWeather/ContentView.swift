@@ -9,21 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    ZStack {
-      Image("cloud")
-        .resizable()
-        .scaledToFill()
-        .edgesIgnoringSafeArea(.all)
+    NavigationView {
+      ZStack {
+        GeometryReader { _ in
+          Image("cloud")
+          //            .resizable()
+          //            .scaledToFill()
+          //            .edgesIgnoringSafeArea(.all)
+        }
+        .ignoresSafeArea()
 
-      ScrollView {
-        top
-        middle
-        bottom
-      } // ScrollView
+        ScrollView {
+          top
+          middle
+          bottom
+        } // ScrollView
+        .padding()
 
-    } // Zstack
-
+      } // Zstack
+    } // NavigationView
   }
+
 
   // MARK: - 컴포넌트
   fileprivate var top: some View {
@@ -48,49 +54,49 @@ struct ContentView: View {
       VStack {
         Text("오전 12시쯤 청명한 상태가 예상됩니다.")
         Divider()
-        //              ScrollView(.horizontal, showsIndicators: false) {
-        VStack {
-          Text("지금")
-          Image(systemName: "cloud.fill")
-          Text("13°")
-          //              }
+        HStack {
+          VStack {
+            Text("지금")
+            Image(systemName: "cloud.fill")
+            Text("13°")
+          }
         }
-      } // Middle
+      }
       .padding()
-      .background(.red)
+      .frame(maxWidth: .infinity)
+      .background(.ultraThinMaterial)
       .cornerRadius(13)
-
     }
   }
   fileprivate var bottom: some View {
-    VStack {
-      HStack {
-        Image(systemName: "calendar")
-        Text("10일간의 일기예보")
-      }
-
-      Divider()
-
-      //          ScrollView(.vertical, showsIndicators: false) {
+    Group {
       VStack {
         HStack {
-          Text("오늘")
-          Image(systemName: "cloud.fill")
-          Text("최저")
+          Image(systemName: "calendar")
+          Text("10일간의 일기예보")
+        }
+        Divider()
+        HStack {
+          VStack {
+            HStack {
+              Text("오늘")
+              Image(systemName: "cloud.fill")
+              Text("최저")
 
-          Text("최고")
+              Text("최고")
+            }
+          }
         }
       }
-      //          }
-    } // Bottom
-    .padding()
-    .background(.blue)
-    .cornerRadius(12)
+      .padding()
+      .background(.ultraThinMaterial)
+      .cornerRadius(13)
+    }
+
 
   }
 
 }
-
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
