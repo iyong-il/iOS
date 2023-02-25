@@ -6,23 +6,3 @@
 //
 
 import UIKit
-import Then
-import SnapKit
-
-struct Utilities {
-
-  func alert(title: String, reject: String, agree: String) -> UIView {
-    let view = UIView()
-    let title = UILabel().then {
-      $0.text = title
-      $0.textColor = .black
-    }
-    let rejectButton = UIButton()
-    let agreeButton = UIButton()
-
-
-
-    return view
-  }
-
-}

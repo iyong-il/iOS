@@ -8,8 +8,8 @@
 import UIKit
 
 final class Alert: UIView {
+
   
-  fileprivate let confirmAlert = Utilities().alert(title: "제주항공 APP의 마케팅 푸시 알림을 동의 하시겠습니까?", reject: "거절", agree: "동의")
   
   override init(frame: CGRect) {
     super.init(frame: frame)

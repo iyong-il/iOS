@@ -93,7 +93,7 @@
 		B14F1DA329A235E100DBF7BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B14F1DA729A2362500DBF7BC /* Alert.swift */,
+				B14F1DB529A23AFD00DBF7BC /* Alert */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +126,14 @@
 				B14F1DAA29A2368200DBF7BC /* Utilities.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B14F1DB529A23AFD00DBF7BC /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B14F1DA729A2362500DBF7BC /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
