@@ -17,18 +17,18 @@ class MainVC: UIViewController {
   }
 }
 
-protocol StoryBoarded {
-  static func instantiate(_ storyboardName: String?) -> Self
-}
-
-extension StoryBoarded {
-  static func instantiate(_ storyboardedName: String? = nil) -> Self {
-
-    let name = storyboardedName ?? String(describing: self)
-
-    let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
-
-//    return storyboard.instantiateViewController(withIdentifier: "")
-  }
-
-}
+//protocol StoryBoarded {
+//  static func instantiate(_ storyboardName: String?) -> Self
+//}
+//
+//extension StoryBoarded {
+//  static func instantiate(_ storyboardedName: String? = nil) -> Self {
+//
+//    let name = storyboardedName ?? String(describing: self)
+//
+//    let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
+//
+//    return storyboard
+//  }
+//
+//}

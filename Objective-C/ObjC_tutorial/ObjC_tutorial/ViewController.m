@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "Friend.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,15 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
+
+
+  Friend *myFriend = [[Friend alloc] init];
+
+
+  [myFriend sayHello];
+
+  [Friend sayGoodbye];
+
 }
 
 
