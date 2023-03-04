@@ -24,7 +24,7 @@ final class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
 
-    navToSecondVCButton.addTarget(self, action: #selector(n/Users/iyong-il/iOS/UIKit/storyboard/UIKit_Storyboard_Navigation_Tutorial/UIKit_Storyboard_Navigation_Tutorial/Storyboard/SecondVC.storyboardavToSecond(_:)), for: .touchUpInside)
+    navToSecondVCButton.addTarget(self, action: #selector(navToSecond(_:)), for: .touchUpInside)
     navToDetailVCButton.addTarget(self, action: #selector(navToDetail(_:)), for: .touchUpInside)
   }
 
