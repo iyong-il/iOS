@@ -51,13 +51,26 @@
                                     <action selector="goBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oxn-Wn-5hQ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIS-cZ-Mao">
+                                <rect key="frame" x="20" y="153" width="353" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aJy-3U-C2n"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pIS-cZ-Mao" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2TS-jz-16H"/>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5WK-uI-eTj"/>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4Z-4a-5Ye"/>
                             <constraint firstItem="fCq-Jd-ZRc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xdk-rQ-ORh"/>
+                            <constraint firstItem="pIS-cZ-Mao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0V-ES-J6a"/>
+                            <constraint firstItem="pIS-cZ-Mao" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hdA-4a-L06"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCq-Jd-ZRc" secondAttribute="bottom" constant="100" id="r0J-HU-84q"/>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wwp-dK-AuX"/>
                         </constraints>
@@ -66,8 +79,9 @@
                     <connections>
                         <outlet property="navToDetailVCButton" destination="ynw-yD-ubz" id="vvZ-PL-Uo6"/>
                         <outlet property="navToSecondVCButton" destination="4NJ-xQ-CxR" id="Qu8-SP-pjT"/>
+                        <outlet property="textField" destination="pIS-cZ-Mao" id="3ez-w3-cEJ"/>
                         <segue destination="Ict-lZ-EGw" kind="show" identifier="navToDetailVC" id="nvq-J0-Qjk"/>
-                        <segue destination="7h2-xM-Gq6" kind="show" identifier="navToSecondVC" id="dLO-h6-aKL"/>
+                        <segue destination="7h2-xM-Gq6" kind="show" identifier="navToSecondVC" destinationCreationSelector="navToSecondVCWithSomeDataWithCoder:sender:segueIdentifier:" id="dLO-h6-aKL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

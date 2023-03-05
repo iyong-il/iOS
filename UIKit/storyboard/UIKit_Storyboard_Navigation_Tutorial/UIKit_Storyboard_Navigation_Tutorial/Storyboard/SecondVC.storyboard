@@ -44,19 +44,52 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mp-8O-fR1">
+                                <rect key="frame" x="30" y="183.33333333333334" width="333" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R0c-TC-U0M">
+                                <rect key="frame" x="20" y="540" width="353" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Y7-i9-pjQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NXj-yt-kbB">
+                                        <rect key="frame" x="0.0" y="65" width="353" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="yw8-Rn-60R"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6mp-8O-fR1" firstAttribute="top" secondItem="LML-Mg-Z9t" secondAttribute="bottom" constant="40" id="3Rp-nb-aAj"/>
+                            <constraint firstItem="R0c-TC-U0M" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9dv-Rq-gdF"/>
+                            <constraint firstItem="R0c-TC-U0M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MU3-ZR-dK1"/>
                             <constraint firstItem="s3T-eL-ncs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PdP-Sa-QSO"/>
+                            <constraint firstItem="6mp-8O-fR1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="YWa-6r-CcV"/>
                             <constraint firstItem="LML-Mg-Z9t" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="nCE-tK-r0b"/>
+                            <constraint firstItem="R0c-TC-U0M" firstAttribute="top" secondItem="s3T-eL-ncs" secondAttribute="bottom" constant="50" id="pL1-G1-Rce"/>
+                            <constraint firstItem="6mp-8O-fR1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vOC-uu-iyC"/>
                             <constraint firstItem="LML-Mg-Z9t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vXM-HU-4bH"/>
                             <constraint firstItem="s3T-eL-ncs" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="yAk-xY-jhT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="IBSegueActionLabel" destination="NXj-yt-kbB" id="Veh-xI-OSq"/>
                         <outlet property="moveToThirdVC" destination="LML-Mg-Z9t" id="orm-FM-7XG"/>
-                        <segue destination="hfP-l2-fhC" kind="show" identifier="moveToThirdVC" id="0gh-W2-ePr"/>
+                        <outlet property="prepareLabel" destination="7Y7-i9-pjQ" id="IR8-Dl-Zgx"/>
+                        <outlet property="titleLabel" destination="6mp-8O-fR1" id="lsn-bD-9iB"/>
+                        <segue destination="hfP-l2-fhC" kind="show" identifier="moveToThirdVC" destinationCreationSelector="navToThirdVCWithSomeDataWithCoder:sender:segueIdentifier:" id="0gh-W2-ePr"/>
                         <segue destination="rqI-Pf-z4F" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="XyK-jv-21Z"/>
                     </connections>
                 </viewController>

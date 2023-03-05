@@ -49,12 +49,20 @@
                                     <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="EgA-0t-G9K"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세번째 VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M9-La-5nC">
+                                <rect key="frame" x="133.33333333333334" y="322" width="126.66666666666666" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kdr-it-eQ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cqM-ka-GT5" firstAttribute="top" secondItem="1vh-su-F63" secondAttribute="bottom" constant="50" id="4Xj-3P-TT6"/>
+                            <constraint firstItem="9M9-La-5nC" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="Lnz-qW-Fkw"/>
                             <constraint firstItem="Kdr-it-eQ4" firstAttribute="bottom" secondItem="iCF-K5-WXK" secondAttribute="bottom" constant="100" id="NvN-Fw-QdW"/>
+                            <constraint firstItem="cZ5-rz-0An" firstAttribute="top" secondItem="9M9-La-5nC" secondAttribute="bottom" constant="50" id="Rpi-9v-umv"/>
                             <constraint firstItem="cZ5-rz-0An" firstAttribute="centerY" secondItem="mek-T9-r9O" secondAttribute="centerY" id="WCv-XB-lUA"/>
                             <constraint firstItem="1vh-su-F63" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="Z1j-pa-gre"/>
                             <constraint firstItem="iCF-K5-WXK" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="gV2-fT-sxb"/>
@@ -64,6 +72,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="subTitleLabel" destination="9M9-La-5nC" id="epO-aX-7do"/>
+                        <outlet property="titleLabel" destination="cZ5-rz-0An" id="kA9-di-thn"/>
                         <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="mEl-6T-lyb"/>
                     </connections>
                 </viewController>

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3un-64-fHh">
-                                <rect key="frame" x="133.66666666666666" y="408.66666666666669" width="125.99999999999997" height="35"/>
+                                <rect key="frame" x="20" y="408.66666666666669" width="353" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,11 +48,15 @@
                             <constraint firstItem="9s0-3X-94v" firstAttribute="bottom" secondItem="dlI-jC-C4K" secondAttribute="bottom" constant="100" id="MVh-qr-N8K"/>
                             <constraint firstItem="dlI-jC-C4K" firstAttribute="top" secondItem="zyW-z9-vjV" secondAttribute="bottom" constant="50" id="MYU-DK-tGo"/>
                             <constraint firstItem="3un-64-fHh" firstAttribute="centerY" secondItem="0ZV-7p-Vrc" secondAttribute="centerY" id="NYN-Cz-jmr"/>
+                            <constraint firstItem="3un-64-fHh" firstAttribute="leading" secondItem="9s0-3X-94v" secondAttribute="leading" constant="20" id="bCB-jb-EVh"/>
                             <constraint firstItem="dlI-jC-C4K" firstAttribute="centerX" secondItem="0ZV-7p-Vrc" secondAttribute="centerX" id="g0K-QN-u3L"/>
                             <constraint firstItem="zyW-z9-vjV" firstAttribute="centerX" secondItem="0ZV-7p-Vrc" secondAttribute="centerX" id="gDW-DS-aFX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rTW-ai-WFK"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="3un-64-fHh" id="pBM-Wg-bNm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEe-my-646" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ifo-bl-yA0" userLabel="Exit" sceneMemberID="exit"/>

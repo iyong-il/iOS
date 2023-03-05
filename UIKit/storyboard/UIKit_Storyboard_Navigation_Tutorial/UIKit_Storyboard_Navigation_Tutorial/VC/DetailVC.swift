@@ -9,12 +9,27 @@ import UIKit
 
 
 final class DetailVC: UIViewController {
-  
+
+  // MARK: - 속성
+  @IBOutlet weak var detailLabel: UILabel!
+
+  var someValue: String = "" {
+    didSet {
+      print(#fileID, #function, #line, "- someValue: \(someValue)")
+    }
+  }
+
+
+  // MARK: - 라이프사이클
   override func viewDidLoad() {
     super.viewDidLoad()
     print(#fileID, #function, #line, "- 디테일VC로 왔다.")
+    detailLabel.numberOfLines = 4
+    detailLabel.text = someValue
   }
 
+
+  // MARK: - 메서드
   @IBAction func goBackToFirstVC(_ sender: UIButton) {
     print(#fileID, #function, #line, "- 디테일VC에서 unwindSegue로 첫번째VC 이동 ")
   }
@@ -22,7 +37,6 @@ final class DetailVC: UIViewController {
   @IBAction func goBackButtonTapped(_ sender: UIButton) {
     self.navigationController?.popViewController(animated: true)
     print(#fileID, #function, #line, "- 디테일VC에서 뒤로가기 버튼이 눌렸다.")
-
   }
 
 
