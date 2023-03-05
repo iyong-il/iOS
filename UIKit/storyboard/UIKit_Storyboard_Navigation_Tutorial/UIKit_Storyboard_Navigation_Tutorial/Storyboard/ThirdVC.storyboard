@@ -23,18 +23,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCF-K5-WXK">
+                                <rect key="frame" x="65" y="683" width="263" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - unwindSegue"/>
+                                <connections>
+                                    <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="HgP-qg-I99"/>
+                                    <segue destination="6Wo-uY-0wU" kind="unwind" identifier="goBackToFirst" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="e8K-3v-WXb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-ka-GT5">
+                                <rect key="frame" x="61.666666666666657" y="598" width="270" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - performSegue"/>
+                                <connections>
+                                    <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="JBp-YC-DAZ"/>
+                                    <action selector="goBackToFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="rP1-zy-OAv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-su-F63">
+                                <rect key="frame" x="65" y="513" width="263" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="두번째 VC로 이동 - unwindSegue"/>
+                                <connections>
+                                    <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="EgA-0t-G9K"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kdr-it-eQ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cqM-ka-GT5" firstAttribute="top" secondItem="1vh-su-F63" secondAttribute="bottom" constant="50" id="4Xj-3P-TT6"/>
+                            <constraint firstItem="Kdr-it-eQ4" firstAttribute="bottom" secondItem="iCF-K5-WXK" secondAttribute="bottom" constant="100" id="NvN-Fw-QdW"/>
                             <constraint firstItem="cZ5-rz-0An" firstAttribute="centerY" secondItem="mek-T9-r9O" secondAttribute="centerY" id="WCv-XB-lUA"/>
+                            <constraint firstItem="1vh-su-F63" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="Z1j-pa-gre"/>
+                            <constraint firstItem="iCF-K5-WXK" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="gV2-fT-sxb"/>
                             <constraint firstItem="cZ5-rz-0An" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="hbE-Uv-JIY"/>
+                            <constraint firstItem="cqM-ka-GT5" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="mDu-Bt-O53"/>
+                            <constraint firstItem="iCF-K5-WXK" firstAttribute="top" secondItem="cqM-ka-GT5" secondAttribute="bottom" constant="50" id="mhl-Kr-RS1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="mEl-6T-lyb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOn-Wb-GIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6Wo-uY-0wU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="-55"/>
+            <point key="canvasLocation" x="-129.00763358778624" y="-55.633802816901408"/>
         </scene>
     </scenes>
     <resources>

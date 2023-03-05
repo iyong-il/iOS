@@ -23,17 +23,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-jC-C4K">
+                                <rect key="frame" x="67" y="683" width="259" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="첫번째VC로 이동 - unwindSegue"/>
+                                <connections>
+                                    <action selector="goBackToFirstVC:" destination="2G4-ew-tDP" eventType="touchUpInside" id="ct8-yu-Xij"/>
+                                    <segue destination="Ifo-bl-yA0" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="i4m-zJ-PLi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyW-z9-vjV">
+                                <rect key="frame" x="155" y="598" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
+                                <connections>
+                                    <action selector="goBackButtonTapped:" destination="2G4-ew-tDP" eventType="touchUpInside" id="Izx-OQ-Vmu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9s0-3X-94v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3un-64-fHh" firstAttribute="centerX" secondItem="0ZV-7p-Vrc" secondAttribute="centerX" id="6cU-FJ-feK"/>
+                            <constraint firstItem="9s0-3X-94v" firstAttribute="bottom" secondItem="dlI-jC-C4K" secondAttribute="bottom" constant="100" id="MVh-qr-N8K"/>
+                            <constraint firstItem="dlI-jC-C4K" firstAttribute="top" secondItem="zyW-z9-vjV" secondAttribute="bottom" constant="50" id="MYU-DK-tGo"/>
                             <constraint firstItem="3un-64-fHh" firstAttribute="centerY" secondItem="0ZV-7p-Vrc" secondAttribute="centerY" id="NYN-Cz-jmr"/>
+                            <constraint firstItem="dlI-jC-C4K" firstAttribute="centerX" secondItem="0ZV-7p-Vrc" secondAttribute="centerX" id="g0K-QN-u3L"/>
+                            <constraint firstItem="zyW-z9-vjV" firstAttribute="centerX" secondItem="0ZV-7p-Vrc" secondAttribute="centerX" id="gDW-DS-aFX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rTW-ai-WFK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEe-my-646" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ifo-bl-yA0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-327" y="-44"/>
         </scene>

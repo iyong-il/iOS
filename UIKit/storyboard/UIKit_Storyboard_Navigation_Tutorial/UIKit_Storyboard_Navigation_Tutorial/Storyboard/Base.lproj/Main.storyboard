@@ -12,7 +12,7 @@
         <!--첫번째-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstVC" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,12 +43,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCq-Jd-ZRc">
+                                <rect key="frame" x="138.33333333333334" y="683.66666666666663" width="116.66666666666666" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="그냥 뒤로가기"/>
+                                <connections>
+                                    <action selector="goBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oxn-Wn-5hQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5WK-uI-eTj"/>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4Z-4a-5Ye"/>
+                            <constraint firstItem="fCq-Jd-ZRc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xdk-rQ-ORh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCq-Jd-ZRc" secondAttribute="bottom" constant="100" id="r0J-HU-84q"/>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wwp-dK-AuX"/>
                         </constraints>
                     </view>
@@ -67,7 +77,7 @@
         <!--SecondVC-->
         <scene sceneID="zYf-y2-0NU">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SecondVC" storyboardName="SecondVC" id="7h2-xM-Gq6" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="SecondVC" storyboardName="SecondVC" referencedIdentifier="SecondVC" id="7h2-xM-Gq6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5mp-0M-i97"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfB-4a-uNG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -77,12 +87,12 @@
         <!--DetailVC-->
         <scene sceneID="6x8-0x-kEg">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="DetailVC" storyboardName="DetailVC" id="Ict-lZ-EGw" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="DetailVC" storyboardName="DetailVC" referencedIdentifier="DetailVC" id="Ict-lZ-EGw" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fVd-Op-gac"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33z-xQ-Gd2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="462"/>
+            <point key="canvasLocation" x="1697" y="85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="57H-c7-ogD">

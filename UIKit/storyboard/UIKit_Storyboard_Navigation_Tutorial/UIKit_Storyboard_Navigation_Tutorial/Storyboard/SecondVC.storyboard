@@ -18,24 +18,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LML-Mg-Z9t">
-                                <rect key="frame" x="124.66666666666669" y="109" width="144" height="35"/>
+                                <rect key="frame" x="125.00000000000001" y="109" width="143.33333333333337" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="세번째 VC로 이동"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="s3T-eL-ncs">
+                                <rect key="frame" x="49.333333333333343" y="362.33333333333331" width="294.33333333333326" height="127.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7F-RO-LXp">
+                                        <rect key="frame" x="0.0" y="0.0" width="294.33333333333331" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="첫번째VC로 돌아가기 - unwindSegue"/>
+                                        <connections>
+                                            <action selector="unwindSegue:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fDa-9e-Aol"/>
+                                            <segue destination="rqI-Pf-z4F" kind="unwind" identifier="goBackToFirstVC" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="poX-GJ-4mg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN3-no-y8m">
+                                        <rect key="frame" x="0.0" y="93.333333333333371" width="294.33333333333331" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="첫번째VC로 돌아가기 - performSegue"/>
+                                        <connections>
+                                            <action selector="goBackTofirstVC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="inS-UL-kF6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="s3T-eL-ncs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PdP-Sa-QSO"/>
                             <constraint firstItem="LML-Mg-Z9t" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="nCE-tK-r0b"/>
                             <constraint firstItem="LML-Mg-Z9t" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="vXM-HU-4bH"/>
+                            <constraint firstItem="s3T-eL-ncs" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="yAk-xY-jhT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="moveToThirdVC" destination="LML-Mg-Z9t" id="orm-FM-7XG"/>
                         <segue destination="hfP-l2-fhC" kind="show" identifier="moveToThirdVC" id="0gh-W2-ePr"/>
+                        <segue destination="rqI-Pf-z4F" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="XyK-jv-21Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rqI-Pf-z4F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="98" y="-10"/>
         </scene>
