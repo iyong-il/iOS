@@ -26,14 +26,12 @@ final class SecondVC: UIViewController {
   init?(coder:NSCoder, someValue: String) {
     self.someValue = someValue
     super.init(coder: coder)
-    print(#fileID, #function, #line, "- <#String#>")
-
+    print(#fileID, #function, #line, "- ")
   }
 
   required init?(coder: NSCoder) {
     super.init(coder: coder)
-    print(#fileID, #function, #line, "- <#String#>")
-
+    print(#fileID, #function, #line, "- ")
   }
   
   // MARK: - 라이프사이클
@@ -48,6 +46,12 @@ final class SecondVC: UIViewController {
     
     moveToThirdVC.addTarget(self, action: #selector(moveToThirdButtonTapped(_:)), for: .touchUpInside)
   }
+
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    prepareLabel.text?.removeAll()
+    IBSegueActionLabel.text?.removeAll()
+  }
   
   
   // MARK: - 메서드
@@ -58,18 +62,18 @@ final class SecondVC: UIViewController {
 
   // prepare방식
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    print(#fileID, #function, #line, "- <#String#>")
+    print(#fileID, #function, #line, "- 세번째 VC로 값을 넘긴다. / prepare방식")
     guard let vc = segue.destination as? ThirdVC else { return }
     vc.someValue1 = prepareLabel.text ?? "값이 없다."
   }
 
+  // ios 13이상 버전 지원 방식
   @IBSegueAction func navToThirdVCWithSomeData(coder: NSCoder, sender: Any?, segueIdentifier: String?) -> ThirdVC? {
-    print(#fileID, #function, #line, "- \(segueIdentifier)")
+    print(#fileID, #function, #line, "- \(String(describing: segueIdentifier))")
 
     let data = IBSegueActionLabel.text ?? "값이 없다."
 
     return ThirdVC(coder: coder, someValue: data)
-
   }
 
   @IBAction func unwindSegue(_ sender: UIButton) {
@@ -86,7 +90,6 @@ final class SecondVC: UIViewController {
   // 도착지에 만들어 놓는 방식
   @IBAction func goBackToSecondVC(unwindSegue: UIStoryboardSegue) {
     print(#fileID, #function, #line, "- unwindSegue : \(unwindSegue.source)")
-
   }
   
   
