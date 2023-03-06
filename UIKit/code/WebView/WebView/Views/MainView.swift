@@ -8,31 +8,19 @@
 import UIKit
 import SnapKit
 
+// MARK: - 프로토콜
+protocol Delegate: AnyObject {
+  func buttonTapped()
+}
+
 final class MainView: UIView {
+  // MARK: - 속성
+  var delegate: Delegate?
 
-  private let button1: UIButton = {
-    let button = UIButton()
-
-    return button
-  }()
-
-  private let button2: UIButton = {
-    let button = UIButton()
-
-    return button
-  }()
-
-  let button3: UIButton = {
-    let button = UIButton()
-
-    return button
-  }()
-
-  private let button4: UIButton = {
-    let button = UIButton()
-
-    return button
-  }()
+  private let button1 = UIButton()
+  private let button2 = UIButton()
+  private let button3 = UIButton()
+  private let button4 = UIButton()
 
   private lazy var view1: UIView = {
     let view = Utilities().makeView(image: "speaker.wave.1.fill", text: "공지사항", btn: button1, divideColor: .lightGray)
@@ -67,18 +55,20 @@ final class MainView: UIView {
     return st
   }()
 
-
-
-
+  
+  // MARK: - 라이프사이클
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupUI()
+    addTarget()
   }
 
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
 
+
+  // MARK: - 메서드
   fileprivate func setupUI() {
     self.backgroundColor = .white
 
@@ -89,11 +79,15 @@ final class MainView: UIView {
       $0.centerX.equalToSuperview()
       $0.left.equalToSuperview().offset(20)
     }
-
-
-
   }
 
+  fileprivate func addTarget() {
+    button3.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+  }
+
+  @objc func buttonTapped() {
+    delegate?.buttonTapped()
+  }
 
 
 

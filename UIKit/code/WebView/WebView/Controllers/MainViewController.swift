@@ -18,7 +18,7 @@ final class MainViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavbar()
-    buttonSelect()
+    mainView.delegate = self
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -31,15 +31,12 @@ final class MainViewController: UIViewController {
     self.navigationController?.navigationBar.prefersLargeTitles = true
   }
 
-  func buttonSelect() {
-    mainView.button3.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-  }
+}
 
-  @objc func buttonTapped() {
-    //    print("이동하겠습니다.")
+extension MainViewController: Delegate {
+  func buttonTapped() {
+    print(#fileID, #function, #line, "- 버튼3이 눌렸다.")
     let vc = DetailViewController()
     self.navigationController?.pushViewController(vc, animated: true)
   }
-
 }
-

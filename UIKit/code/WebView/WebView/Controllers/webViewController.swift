@@ -13,22 +13,21 @@ class WebViewController: UIViewController {
   var webView: WKWebView!
 
   override func loadView() {
-    let webConfiguration = WKWebViewConfiguration()
-    webView = WKWebView(frame: .zero, configuration: webConfiguration)
-    webView.uiDelegate = self
-    self.view = webView
-
+      let webConfiguration = WKWebViewConfiguration()
+      self.webView = WKWebView(frame: .zero, configuration: webConfiguration)
+      self.webView.uiDelegate = self
+        self.view = self.webView
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-//    self.navigationController?.navigationBar.isHidden = true
+    DispatchQueue.global().async {
+      guard let myURL = URL(string:"https://naver.com/") else { return }
+      let myRequest = URLRequest(url: myURL)
 
-    guard let myURL = URL(string:"https://naver.com/") else { return }
-    let myRequest = URLRequest(url: myURL)
-
-    DispatchQueue.main.async {
-      self.webView.load(myRequest)
+      DispatchQueue.main.async {
+        self.webView.load(myRequest)
+      }
     }
 
 

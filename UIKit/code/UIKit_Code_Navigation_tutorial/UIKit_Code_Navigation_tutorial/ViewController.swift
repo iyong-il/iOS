@@ -7,13 +7,22 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+class ViewController: UIViewController {
 
+  @IBOutlet weak var navToSecond: UIButton!
+
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+
+
   }
 
+  @IBAction func buttonPressed(_ sender: UIButton) {
+    if let vc = SecondVC.getInstance() {
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
+  }
 
 }
 
