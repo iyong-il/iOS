@@ -10,10 +10,10 @@ import UIKit
 final class FirstVC: UIViewController {
   
   // MARK: - 속성
+  @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var navToSecondVCButton: UIButton!
   @IBOutlet weak var navToDetailVCButton: UIButton!
   @IBOutlet weak var textField: UITextField!
-  @IBOutlet weak var titleLabel: UILabel!
 
   var stepNumber: Int = 1 {
     didSet {
