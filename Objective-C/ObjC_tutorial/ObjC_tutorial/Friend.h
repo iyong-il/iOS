@@ -9,6 +9,7 @@
 #define Friend_h
 #import <UIKit/UIKit.h>
 
+
 @interface Friend : NSObject
 
 // 외부에서 접근 가능한 녀석들 - 멤버 변수
