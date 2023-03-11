@@ -70,13 +70,13 @@
 				B11CBBF729B338AD00176BC0 /* SceneDelegate.m */,
 				B11CBBF929B338AD00176BC0 /* ViewController.h */,
 				B11CBBFA29B338AD00176BC0 /* ViewController.m */,
+				B11CBC0C29B33F3600176BC0 /* Friend.h */,
+				B11CBC0D29B33FD900176BC0 /* Friend.m */,
 				B11CBBFC29B338AE00176BC0 /* Main.storyboard */,
 				B11CBBFF29B338AE00176BC0 /* Assets.xcassets */,
 				B11CBC0129B338AE00176BC0 /* LaunchScreen.storyboard */,
 				B11CBC0429B338AE00176BC0 /* Info.plist */,
 				B11CBC0529B338AE00176BC0 /* main.m */,
-				B11CBC0C29B33F3600176BC0 /* Friend.h */,
-				B11CBC0D29B33FD900176BC0 /* Friend.m */,
 			);
 			path = ObjC_tutorial;
 			sourceTree = "<group>";
