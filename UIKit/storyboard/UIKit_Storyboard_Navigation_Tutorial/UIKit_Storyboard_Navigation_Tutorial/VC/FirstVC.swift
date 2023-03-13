@@ -114,6 +114,24 @@ final class FirstVC: UIViewController {
 
   }
 
+
+  @IBAction func doSecondPushAction(_ sender: UIButton) {
+//    guard let secondVC = SecondVC.getInstance() else { return }
+//    self.navigationController?.pushViewController(secondVC, animated: true)
+//
+//    if let firstVC = FirstVC.getInstance("Main") {
+//      self.navigationController?.pushViewController(firstVC, animated: true)
+//    }
+
+    if let thirdVC = ThirdVC.getInstance() {
+      self.navigationController?.pushViewController(thirdVC, animated: true)
+    }
+  }
+
+
+
+
+
   // 빈 곳 터치
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     self.view.endEditing(true)

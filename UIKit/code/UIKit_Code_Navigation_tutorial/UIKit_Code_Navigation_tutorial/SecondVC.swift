@@ -23,11 +23,12 @@ extension SecondVC {
 //  }
 }
 
+
 extension UIViewController {
   static func getInstance() -> Self? {
     let name = String(describing: self)
 
-    let storyBoard = UIStoryboard(name: name, bundle: Bundle.main)
-    return storyBoard.instantiateViewController(withIdentifier: name) as? Self
+    let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
+    return storyboard.instantiateViewController(withIdentifier: name) as? Self
   }
 }

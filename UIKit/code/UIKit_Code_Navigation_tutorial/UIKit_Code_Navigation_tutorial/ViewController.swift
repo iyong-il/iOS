@@ -19,9 +19,14 @@ class ViewController: UIViewController {
   }
 
   @IBAction func buttonPressed(_ sender: UIButton) {
-    if let vc = SecondVC.getInstance() {
-      self.navigationController?.pushViewController(vc, animated: true)
-    }
+    //    let vc = SecondVC()
+    //    self.navigationController?.pushViewController(vc, animated: true)
+
+    guard let vc = SecondVC.getInstance() else { return }
+    self.navigationController?.pushViewController(vc, animated: true)
+
+    
+
   }
 
 }

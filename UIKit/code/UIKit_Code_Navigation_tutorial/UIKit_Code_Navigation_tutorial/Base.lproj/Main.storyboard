@@ -45,7 +45,7 @@
         <!--SecondVC-->
         <scene sceneID="hJq-ZH-Pgw">
             <objects>
-                <viewController restorationIdentifier="SecondVC" storyboardIdentifier="SecondVC" id="ZVr-3o-8vC" customClass="SecondVC" customModule="UIKit_Code_Navigation_tutorial" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZVr-3o-8vC" customClass="SecondVC" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7o-xf-UdL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -91,6 +91,52 @@ final class SecondVC: UIViewController {
   @IBAction func goBackToSecondVC(unwindSegue: UIStoryboardSegue) {
     print(#fileID, #function, #line, "- unwindSegue : \(unwindSegue.source)")
   }
+
+  @IBAction func doThirdPushAction(_ sender: UIButton) {
+    // 기존 방식
+    let storyboard = UIStoryboard(name: "ThirdVC", bundle: Bundle.main)
+
+    if let thirdVC = storyboard.instantiateViewController(withIdentifier: "ThirdVC") as? ThirdVC {
+      self.navigationController?.pushViewController(thirdVC, animated: true)
+    }
+
+    // 확장으로 사용하는 방식
+    //    if let thirdVC = ThirdVC.getInstance() {
+    //      self.navigationController?.pushViewController(thirdVC, animated: true)
+    //    }
+
+  }
+
   
   
 }
+
+// MARK: - 확장
+// 이렇게 자주 사용하는 것들은 확장으로 빼서 사용할 수 있도록 연습하자
+//extension UIViewController {
+//  static func getInstance(_ storyboardName: String? = nil) -> Self? {
+//    let name = storyboardName ?? String(describing: self)
+//
+//    let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
+//    return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as? Self
+//  }
+//}
+
+// 위의 확장을 프로토콜로 사용하는 방법
+protocol StoryBoarded {
+  static func getInstance(_ storyBoardName: String?) -> Self?
+}
+
+extension StoryBoarded where Self: UIViewController {
+  static func getInstance(_ storyBoardName: String? = nil) -> Self? {
+    let name = storyBoardName ?? String(describing: self)
+
+    let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
+    return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as? Self
+  }
+}
+
+//extension SecondVC: StoryBoarded {}
+//extension ThirdVC: StoryBoarded {}
+// 위의 두개처럼 만드는거보다 밑에 하나가 더 편하다.
+extension UIViewController: StoryBoarded {}
