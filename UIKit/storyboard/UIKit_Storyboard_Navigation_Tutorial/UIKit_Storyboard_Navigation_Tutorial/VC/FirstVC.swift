@@ -105,10 +105,13 @@ final class FirstVC: UIViewController {
 
     // 두번째 VC에서 첫번째 VC로 이동했을 때 데이터 주입
     if let secondVC = unwindSegue.source as? SecondVC {
+      print(#fileID, #function, #line, "- 두번째VC에서 첫번째로 왔다.")
+
       self.titleLabel.text = secondVC.prepareLabel.text ?? "값이 없다."
     }
 
     if let detailVC = unwindSegue.source as? DetailVC {
+      print(#fileID, #function, #line, "- 디테일 VC에서 첫번째로 왔다.")
       self.titleLabel.text = detailVC.detailLabel.text
     }
 
