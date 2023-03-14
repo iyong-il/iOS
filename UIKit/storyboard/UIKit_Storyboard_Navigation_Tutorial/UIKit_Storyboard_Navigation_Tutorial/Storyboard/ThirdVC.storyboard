@@ -28,8 +28,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - unwindSegue"/>
                                 <connections>
-                                    <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="HgP-qg-I99"/>
-                                    <segue destination="6Wo-uY-0wU" kind="unwind" identifier="goBackToFirst" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="e8K-3v-WXb"/>
+                                    <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="ope-VI-Dae"/>
+                                    <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="xCj-Bk-1DD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-ka-GT5">
@@ -37,8 +37,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - performSegue"/>
                                 <connections>
-                                    <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="JBp-YC-DAZ"/>
-                                    <action selector="goBackToFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="rP1-zy-OAv"/>
+                                    <action selector="goBackToFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="A0t-Y0-cBw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-su-F63">
@@ -46,7 +45,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="두번째 VC로 이동 - unwindSegue"/>
                                 <connections>
-                                    <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="EgA-0t-G9K"/>
+                                    <action selector="goBackFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="YkD-Js-oOR"/>
+                                    <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="Kg9-6H-gBX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세번째 VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M9-La-5nC">

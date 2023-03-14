@@ -7,27 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-  @IBOutlet weak var navToSecond: UIButton!
-
-  
   override func viewDidLoad() {
     super.viewDidLoad()
-
-
+    self.view.backgroundColor = .blue
   }
 
-  @IBAction func buttonPressed(_ sender: UIButton) {
-    //    let vc = SecondVC()
-    //    self.navigationController?.pushViewController(vc, animated: true)
-
-    guard let vc = SecondVC.getInstance() else { return }
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    let vc = SecondVC()
     self.navigationController?.pushViewController(vc, animated: true)
-
-    
-
   }
-
 }
-

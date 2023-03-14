@@ -117,6 +117,50 @@ final class FirstVC: UIViewController {
 
   }
 
+  // UIButton을 커스텀하는 방식
+  @IBAction func handlePushAction(_ sender: NavigationButton) {
+    // UIButton일 경우 sender.currentTitle로 해도 좋을 것 같다.
+    let sender = sender.route
+    print(#fileID, #function, #line, "- \(sender)")
+
+    var vc: UIViewController? = nil
+
+    switch sender {
+    case "SecondVC":
+      vc = SecondVC.getInstance()
+    case "ThirdVC":
+      vc = ThirdVC.getInstance()
+    case "DetailVC":
+      vc = DetailVC.getInstance()
+    default:
+      break
+    }
+
+    if let vc = vc {
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+  }
+
+  @IBAction func buttonPressed(_ sender: UIButton) {
+    guard let sender = sender.currentTitle else { return }
+
+    var vc : UIViewController? = nil
+
+    switch sender {
+    case "프로그램 푸시 - 두번째로 이동":
+      vc = SecondVC.getInstance()
+    case "프로그램 푸시 - 세번째로 이동":
+      vc = ThirdVC.getInstance()
+    default:
+      break
+    }
+
+    if let vc = vc {
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
+  }
+
 
   @IBAction func doSecondPushAction(_ sender: UIButton) {
 //    guard let secondVC = SecondVC.getInstance() else { return }

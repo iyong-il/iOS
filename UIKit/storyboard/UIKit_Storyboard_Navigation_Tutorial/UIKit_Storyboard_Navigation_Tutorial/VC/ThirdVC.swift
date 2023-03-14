@@ -25,6 +25,7 @@ final class ThirdVC: UIViewController {
     }
   }
 
+
   init?(coder:NSCoder, someValue: String) {
     self.someValue2 = someValue
     super.init(coder: coder)
@@ -45,13 +46,17 @@ final class ThirdVC: UIViewController {
 
 
   // MARK: - 메서드
-  @IBAction func goBackToFirst(_ sender: UIButton) {
-    print(#fileID, #function, #line, "- 세번째VC에서 unwindSegue로 첫번째VC 이동")
+  @IBAction func goBackFirstVC(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 세번째VC에서 unwindSegue로 두번째VC 이동")
   }
 
   @IBAction func goBackToFirstVC(_ sender: UIButton) {
     print(#fileID, #function, #line, "- 세번째VC에서 performSegue로 첫번째VC 이동")
     self.performSegue(withIdentifier: "goBackToFirst", sender: self)
+  }
+
+  @IBAction func goBackToFirst(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 세번째VC에서 unwindSegue로 첫번째VC 이동")
   }
 
 
