@@ -17,9 +17,10 @@ final class MainViewController: UIViewController {
     $0.isUserInteractionEnabled = true
     $0.alwaysBounceVertical = true
     $0.alwaysBounceHorizontal = false
-
+    $0.showsVerticalScrollIndicator = false
     $0.addSubview(mainView)
   }
+
 
   private let checkTrue: Bool = true
 

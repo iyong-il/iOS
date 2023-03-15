@@ -45,14 +45,14 @@ final class MainView: UIView {
 
   // 이메일 텍스트필드 컨테이너뷰
   private lazy var emailContainerView: UIView = {
-    let view = Utilities().makeInputContainerView(textField: emailTextField)
+    let view = Utilities.makeInputContainerView(textField: emailTextField)
 
     return view
   }()
 
   // 비밀번호 텍스트필드 컨테이너뷰
   private lazy var passwordContainerView: UIView = {
-    let view = Utilities().makeInputContainerView(textField: passwordTextField)
+    let view = Utilities.makeInputContainerView(textField: passwordTextField)
     view.addSubview(secureButton)
 
     return view
@@ -60,7 +60,7 @@ final class MainView: UIView {
 
   // 이메일 텍스트필드
   let emailTextField: UITextField = {
-    let tf = Utilities().inputTextField(placeholder: "아이디 입력")
+    let tf = Utilities.inputTextField(placeholder: "아이디 입력")
     tf.clearButtonMode = .always
 
     return tf
@@ -68,7 +68,7 @@ final class MainView: UIView {
 
   // 비밀번호 텍스트필드
   var passwordTextField: UITextField = {
-    let tf = Utilities().inputTextField(placeholder: "비밀번호 입력")
+    let tf = Utilities.inputTextField(placeholder: "비밀번호 입력")
     tf.isSecureTextEntry = true
 
     return tf
@@ -80,14 +80,14 @@ final class MainView: UIView {
     button.setTitle("표시", for: .normal)
     button.titleLabel?.textColor = .lightGray
     button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-    button.addTarget(self, action: #selector(secureButtonTapped), for: .touchUpInside)
+    button.addTarget(MainView.self, action: #selector(secureButtonTapped), for: .touchUpInside)
 
     return button
   }()
 
   // 로그인 버튼
   let loginButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .white, text: "로그인", textColor: .black)
+    let button = Utilities.setupButton(backColor: .white, text: "로그인", textColor: .black)
     button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
 
     return button
@@ -106,18 +106,9 @@ final class MainView: UIView {
   }
 
   // 아이디찾기 버튼
-  let searchIDButton: UIButton = {
-    let button = Utilities().setupAttributedButton("아이디 찾기  |")
-
-    return button
-  }()
-
+  let searchIDButton: UIButton = Utilities.setupAttributedButton("아이디 찾기  |")
   // 비밀번호찾기 버튼
-  let searchPWButton: UIButton = {
-    let button = Utilities().setupAttributedButton("   비밀번호 찾기")
-
-    return button
-  }()
+  let searchPWButton: UIButton = Utilities.setupAttributedButton("   비밀번호 찾기")
 
   // 스택뷰
   private lazy var searchStackView = UIStackView().then {
@@ -127,54 +118,20 @@ final class MainView: UIView {
     $0.axis = .horizontal
     $0.alignment = .center
   }
-
-
   // 카카오 컨테이너뷰
-  lazy var kakaoContainerView: UIView = {
-    let view = Utilities().setupButtonContainerView(withImage: #imageLiteral(resourceName: "Vector"), button: kakaoButton)
-
-
-    return view
-  }()
-
+  lazy var kakaoContainerView: UIView = Utilities.setupButtonContainerView(withImage: #imageLiteral(resourceName: "Vector"), button: kakaoButton)
   // 구글 컨테이너뷰
-  lazy var googleContainerView: UIView = {
-    let view = Utilities().setupButtonContainerView(withImage: #imageLiteral(resourceName: "Google"), button: googleButton)
-
-    return view
-  }()
-
+  lazy var googleContainerView: UIView = Utilities.setupButtonContainerView(withImage: #imageLiteral(resourceName: "Google"), button: googleButton)
   // 네이버 컨테이너뷰
-  lazy var naverContainerView: UIView = {
-    let view = Utilities().setupButtonContainerView(withImage: #imageLiteral(resourceName: "icon_naver"), button: naverButton)
-
-    return view
-  }()
-
+  lazy var naverContainerView: UIView = Utilities.setupButtonContainerView(withImage: #imageLiteral(resourceName: "icon_naver"), button: naverButton)
   // 이메일 버튼
-  lazy var emailButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .rgb(red: 85, green: 85, blue: 85), text: "이메일로가입", textColor: .white)
-
-    return button
-  }()
+  lazy var emailButton: UIButton = Utilities.setupButton(backColor: .rgb(red: 85, green: 85, blue: 85), text: "이메일로가입", textColor: .white)
   // 카카오 버튼
-  lazy var kakaoButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .rgb(red: 255, green: 234, blue: 15), text: "카카오로 시작하기", textColor: .black)
-
-    return button
-  }()
+  lazy var kakaoButton: UIButton = Utilities.setupButton(backColor: .rgb(red: 255, green: 234, blue: 15), text: "카카오로 시작하기", textColor: .black)
   // 구글버튼
-  lazy var googleButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .white, text: "구글로 시작하기", textColor: .black)
-
-    return button
-  }()
+  lazy var googleButton: UIButton = Utilities.setupButton(backColor: .white, text: "구글로 시작하기", textColor: .black)
   // 네이버버튼
-  lazy var naverButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .rgb(red: 113, green: 198, blue: 92), text: "네이버로 시작하기", textColor: .white)
-
-    return button
-  }()
+  lazy var naverButton: UIButton = Utilities.setupButton(backColor: .rgb(red: 113, green: 198, blue: 92), text: "네이버로 시작하기", textColor: .white)
 
   private lazy var buttonStackView = UIStackView().then {
     $0.addArrangedSubview(emailButton)

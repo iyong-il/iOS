@@ -15,7 +15,7 @@ final class PopupView: UIView {
   }
 
   var deepButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .black, text: "자세히 보기", textColor: .white)
+    let button = Utilities.setupButton(backColor: .black, text: "자세히 보기", textColor: .white)
     button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
 
     return button
@@ -27,7 +27,7 @@ final class PopupView: UIView {
   }
 
   let destructButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .rgb(red: 217, green: 217, blue: 217), text: "다시 보지 않기", textColor: .rgb(red: 157, green: 153, blue: 153))
+    let button = Utilities.setupButton(backColor: .rgb(red: 217, green: 217, blue: 217), text: "다시 보지 않기", textColor: .rgb(red: 157, green: 153, blue: 153))
     button.layer.borderWidth = 0.5
     button.layer.borderColor = UIColor.lightGray.cgColor
 
@@ -35,7 +35,7 @@ final class PopupView: UIView {
   }()
 
   let cancelButton: UIButton = {
-    let button = Utilities().setupButton(backColor: .rgb(red: 217, green: 217, blue: 217), text: "닫기", textColor: .rgb(red: 157, green: 153, blue: 153))
+    let button = Utilities.setupButton(backColor: .rgb(red: 217, green: 217, blue: 217), text: "닫기", textColor: .rgb(red: 157, green: 153, blue: 153))
     button.layer.borderWidth = 0.5
     button.layer.borderColor = UIColor.lightGray.cgColor
 

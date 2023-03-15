@@ -10,7 +10,7 @@ import SnapKit
 struct Utilities {
 
   // MARK: - 텍스트필드를 감싸는 뷰를 만드는 메서드
-  func makeInputContainerView(textField: UITextField) -> UIView {
+  static func makeInputContainerView(textField: UITextField) -> UIView {
     let view = UIView()
     let divideView = UIView()
     divideView.backgroundColor = .lightGray
@@ -32,7 +32,7 @@ struct Utilities {
     return view
   }
 // MARK: -  텍스트필드를 만드는 메서드
-  func inputTextField(placeholder: String) -> UITextField {
+  static func inputTextField(placeholder: String) -> UITextField {
     let tf = UITextField()
     tf.font = UIFont.systemFont(ofSize: 18)
     tf.textColor = .lightGray
@@ -43,7 +43,7 @@ struct Utilities {
   }
 
   // MARK: - 버튼을 감싸는 뷰를 만드는 메서드
-  func setupButtonContainerView(withImage: UIImage, button: UIButton) -> UIView {
+  static func setupButtonContainerView(withImage: UIImage, button: UIButton) -> UIView {
     let view = UIView()
     let imageView = UIImageView()
 
@@ -66,7 +66,7 @@ struct Utilities {
   }
 
   // MARK: - 버튼 만드는 메서드
-  func setupButton(backColor: UIColor, text: String, textColor: UIColor) -> UIButton {
+  static func setupButton(backColor: UIColor, text: String, textColor: UIColor) -> UIButton {
     let button = UIButton()
     button.setTitle(text, for: .normal)
     button.setTitleColor(textColor, for: .normal)
@@ -79,7 +79,7 @@ struct Utilities {
   }
 
   // MARK: - 아이디 / 비밀번호 찾기버튼 만들기
-  func setupAttributedButton(_ first: String) -> UIButton {
+  static func setupAttributedButton(_ first: String) -> UIButton {
     let button = UIButton()
     let attributedTitle = NSMutableAttributedString(string: first, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .regular), NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray])
 
