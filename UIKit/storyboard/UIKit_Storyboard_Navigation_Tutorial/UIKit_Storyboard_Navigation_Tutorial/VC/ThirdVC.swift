@@ -52,7 +52,7 @@ final class ThirdVC: UIViewController {
 
   @IBAction func goBackToFirstVC(_ sender: UIButton) {
     print(#fileID, #function, #line, "- 세번째VC에서 performSegue로 첫번째VC 이동")
-    self.performSegue(withIdentifier: "goBackToFirst", sender: self)
+//    self.performSegue(withIdentifier: "goBackToFirst", sender: self)
   }
 
   @IBAction func goBackToFirst(_ sender: UIButton) {
