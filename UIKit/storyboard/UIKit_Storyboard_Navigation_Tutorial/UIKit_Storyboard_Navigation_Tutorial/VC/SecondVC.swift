@@ -107,7 +107,21 @@ final class SecondVC: UIViewController {
 
   }
 
-  
+  @IBAction func popToFirstVC(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 두번째 VC에서 popTo로 첫번째VC 이동")
+
+    guard let vc = self.navigationController?.viewControllers,
+          let first = vc.first(where: {$0 is FirstVC}) else { return }
+    self.navigationController?.popToViewController(first, animated: true)
+
+//        self.navigationController?.popToViewController(self.navigationController!.viewControllers[0], animated: true)
+
+  }
+
+
+
+
+
   
 }
 

@@ -12,6 +12,7 @@ final class FirstVC: UIViewController {
   // MARK: - 속성
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var navToSecondVCButton: UIButton!
+  @IBOutlet weak var navToThirdVCButton: UIButton!
   @IBOutlet weak var navToDetailVCButton: UIButton!
   @IBOutlet weak var textField: UITextField!
 
@@ -29,6 +30,7 @@ final class FirstVC: UIViewController {
     textField.delegate = self
 
     navToSecondVCButton.addTarget(self, action: #selector(navToSecond(_:)), for: .touchUpInside)
+    navToThirdVCButton.addTarget(self, action: #selector(navToThird(_:)), for: .touchUpInside)
     navToDetailVCButton.addTarget(self, action: #selector(navToDetail(_:)), for: .touchUpInside)
   }
 
@@ -52,6 +54,12 @@ final class FirstVC: UIViewController {
     print(#fileID, #function, #line, "- 두번째VC로 이동")
     // 화면이동 메서드(segue way에 Identifier연결)
     self.performSegue(withIdentifier: "navToSecondVC", sender: self)
+  }
+
+  @objc func navToThird(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 세번째VC로 이동")
+    self.performSegue(withIdentifier: "navToThirdVC", sender: self)
+
   }
   
   @objc fileprivate func navToDetail(_ sender: UIButton) {

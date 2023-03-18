@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4t7-Uy-zMp">
-                                <rect key="frame" x="20" y="234.66666666666663" width="353" height="469"/>
+                                <rect key="frame" x="20" y="260.33333333333331" width="353" height="523.33333333333348"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NJ-xQ-CxR">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
@@ -27,13 +27,19 @@
                                         <buttonConfiguration key="configuration" style="plain" title="두번째로 이동"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-yD-ubz">
-                                        <rect key="frame" x="0.0" y="54.333333333333343" width="353" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="54.333333333333371" width="353" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="세번째로 이동"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfN-2z-k6z">
+                                        <rect key="frame" x="0.0" y="108.66666666666669" width="353" height="34.333333333333343"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="디테일로 이동"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-KQ-9JB">
-                                        <rect key="frame" x="0.0" y="108.66666666666666" width="353" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="163" width="353" height="34.333333333333343"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="프로그램 푸시"/>
@@ -42,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wk-lq-tFe">
-                                        <rect key="frame" x="0.0" y="163.00000000000003" width="353" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="217.33333333333337" width="353" height="34.333333333333343"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="프로그램 푸시 - 확장, 프로토콜"/>
@@ -51,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cse-jn-top" customClass="NavigationButton" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="217.33333333333334" width="353" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="271.66666666666669" width="353" height="34.333333333333314"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커스텀 푸시 - 두번째로 이동"/>
@@ -63,7 +69,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMT-q5-xOP" customClass="NavigationButton" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="271.66666666666663" width="353" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="326.00000000000006" width="353" height="34.333333333333314"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커스텀 푸시 - 세번째로 이동"/>
@@ -75,7 +81,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDi-kC-qvh" customClass="NavigationButton" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="326" width="353" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="380.33333333333331" width="353" height="34.333333333333314"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커스텀 푸시 - 디테일로 이동"/>
@@ -87,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgh-XD-91E" customClass="NavigationButton" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="380.33333333333337" width="353" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="434.66666666666669" width="353" height="34.333333333333314"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="프로그램 푸시 - 두번째로 이동"/>
@@ -97,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATx-7u-rBl" customClass="NavigationButton" customModule="UIKit_Storyboard_Navigation_Tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="434.66666666666674" width="353" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="489.00000000000006" width="353" height="34.333333333333314"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="프로그램 푸시 - 세번째로 이동"/>
@@ -109,7 +115,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCq-Jd-ZRc">
-                                <rect key="frame" x="138.33333333333334" y="733.66666666666663" width="116.66666666666666" height="34.333333333333371"/>
+                                <rect key="frame" x="138.33333333333334" y="783.66666666666663" width="116.66666666666666" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="그냥 뒤로가기"/>
                                 <connections>
@@ -117,16 +123,16 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIS-cZ-Mao">
-                                <rect key="frame" x="20" y="103" width="353" height="60"/>
+                                <rect key="frame" x="20" y="103" width="353" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="aJy-3U-C2n"/>
+                                    <constraint firstAttribute="height" constant="30" id="aJy-3U-C2n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3T-ug-jqj">
-                                <rect key="frame" x="20" y="188" width="353" height="36"/>
+                                <rect key="frame" x="20" y="158" width="353" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -139,27 +145,39 @@
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5WK-uI-eTj"/>
                             <constraint firstItem="4t7-Uy-zMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4Z-4a-5Ye"/>
                             <constraint firstItem="fCq-Jd-ZRc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xdk-rQ-ORh"/>
-                            <constraint firstItem="fCq-Jd-ZRc" firstAttribute="top" secondItem="4t7-Uy-zMp" secondAttribute="bottom" constant="30" id="cQ9-UY-RAn"/>
+                            <constraint firstItem="fCq-Jd-ZRc" firstAttribute="top" secondItem="4t7-Uy-zMp" secondAttribute="bottom" id="cQ9-UY-RAn"/>
                             <constraint firstItem="pIS-cZ-Mao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0V-ES-J6a"/>
                             <constraint firstItem="K3T-ug-jqj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g5f-P2-VLo"/>
                             <constraint firstItem="pIS-cZ-Mao" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hdA-4a-L06"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCq-Jd-ZRc" secondAttribute="bottom" constant="50" id="r0J-HU-84q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCq-Jd-ZRc" secondAttribute="bottom" id="r0J-HU-84q"/>
                             <constraint firstItem="K3T-ug-jqj" firstAttribute="top" secondItem="pIS-cZ-Mao" secondAttribute="bottom" constant="25" id="y9C-WA-9dd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="첫번째" id="d5x-mo-7t6"/>
                     <connections>
-                        <outlet property="navToDetailVCButton" destination="ynw-yD-ubz" id="vvZ-PL-Uo6"/>
+                        <outlet property="navToDetailVCButton" destination="RfN-2z-k6z" id="eLr-Bl-CiC"/>
                         <outlet property="navToSecondVCButton" destination="4NJ-xQ-CxR" id="Qu8-SP-pjT"/>
+                        <outlet property="navToThirdVCButton" destination="ynw-yD-ubz" id="naa-Ja-IeF"/>
                         <outlet property="textField" destination="pIS-cZ-Mao" id="3ez-w3-cEJ"/>
                         <outlet property="titleLabel" destination="K3T-ug-jqj" id="ccL-a0-HwG"/>
                         <segue destination="Ict-lZ-EGw" kind="show" identifier="navToDetailVC" id="nvq-J0-Qjk"/>
                         <segue destination="7h2-xM-Gq6" kind="show" identifier="navToSecondVC" destinationCreationSelector="navToSecondVCWithSomeDataWithCoder:sender:segueIdentifier:" id="dLO-h6-aKL"/>
+                        <segue destination="1hJ-iR-QCA" kind="show" identifier="navToThirdVC" id="Gza-Eu-39Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="941.22137404580144" y="-6.3380281690140849"/>
+        </scene>
+        <!--ThirdVC-->
+        <scene sceneID="o1G-UO-9ja">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ThirdVC" storyboardName="ThirdVC" referencedIdentifier="ThirdVC" id="1hJ-iR-QCA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3m6-Rz-nNs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TG-U8-IaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="-119"/>
         </scene>
         <!--SecondVC-->
         <scene sceneID="zYf-y2-0NU">

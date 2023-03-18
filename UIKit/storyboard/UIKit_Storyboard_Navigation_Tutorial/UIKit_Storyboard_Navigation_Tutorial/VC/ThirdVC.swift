@@ -51,8 +51,8 @@ final class ThirdVC: UIViewController {
   }
 
   @IBAction func goBackToFirstVC(_ sender: UIButton) {
-    print(#fileID, #function, #line, "- 세번째VC에서 performSegue로 첫번째VC 이동")
-//    self.performSegue(withIdentifier: "goBackToFirst", sender: self)
+    print(#fileID, #function, #line, "- 세번째VC에서 popToroot로 첫번째VC 이동")
+    self.navigationController?.popToRootViewController(animated: true)
   }
 
   @IBAction func goBackToFirst(_ sender: UIButton) {

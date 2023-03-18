@@ -23,7 +23,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="세번째 VC로 이동"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="s3T-eL-ncs">
-                                <rect key="frame" x="49.333333333333343" y="362.33333333333331" width="294.33333333333326" height="127.66666666666669"/>
+                                <rect key="frame" x="49.333333333333343" y="315.66666666666669" width="294.33333333333326" height="221.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7F-RO-LXp">
                                         <rect key="frame" x="0.0" y="0.0" width="294.33333333333331" height="34.333333333333336"/>
@@ -35,11 +35,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN3-no-y8m">
-                                        <rect key="frame" x="0.0" y="93.333333333333371" width="294.33333333333331" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="93.333333333333314" width="294.33333333333331" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="첫번째VC로 돌아가기 - performSegue"/>
                                         <connections>
                                             <action selector="goBackTofirstVC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="inS-UL-kF6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36p-3N-2zs">
+                                        <rect key="frame" x="0.0" y="186.66666666666663" width="294.33333333333331" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="프로그램 - 첫번째로 돌아가기"/>
+                                        <connections>
+                                            <action selector="popToFirstVC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SnR-jB-atO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -51,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R0c-TC-U0M">
-                                <rect key="frame" x="20" y="540" width="353" height="120"/>
+                                <rect key="frame" x="20" y="586.66666666666663" width="353" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Y7-i9-pjQ">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="55"/>

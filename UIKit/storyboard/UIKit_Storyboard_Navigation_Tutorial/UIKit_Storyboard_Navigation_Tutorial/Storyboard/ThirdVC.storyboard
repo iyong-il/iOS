@@ -33,9 +33,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-ka-GT5">
-                                <rect key="frame" x="61.666666666666657" y="598" width="270" height="35"/>
+                                <rect key="frame" x="75.666666666666686" y="598" width="242" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - performSegue"/>
+                                <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - popToRoot"/>
                                 <connections>
                                     <action selector="goBackToFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="A0t-Y0-cBw"/>
                                 </connections>
