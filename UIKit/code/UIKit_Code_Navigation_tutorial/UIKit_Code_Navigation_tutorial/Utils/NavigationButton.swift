@@ -16,8 +16,8 @@ class NavigationButton: UIButton {
     case DetailVC = "DetailVC"
   }
 
-  var routeVC: Route = Route.firstVC
-
+  var routeVC: Route? = nil
+  // inspector에 keyPath를 입력해줘야 한다.
   @IBInspectable
   var routeName: String? = "" {
     willSet {

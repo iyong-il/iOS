@@ -18,21 +18,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-iZ-3fU">
-                                <rect key="frame" x="20" y="349.66666666666669" width="353" height="153"/>
+                                <rect key="frame" x="20" y="320" width="353" height="212.33333333333337"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-Na-CLs" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-Na-CLs">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="프로그램 - 첫번째VC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="routeName" value="FirstVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNr-mz-2Kc" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="59.333333333333314" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커스텀 - 두번째VC"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="routeName" value="SecondVC"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taW-8i-j71"/>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59B-76-5OW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnf-JC-w8E" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="59.333333333333314" width="353" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="118.66666666666667" width="353" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커스텀 - 세번째VC"/>
                                         <userDefinedRuntimeAttributes>
@@ -43,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-kQ-ON1" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118.66666666666661" width="353" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="178" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커스텀 - 디테일VC"/>
                                         <userDefinedRuntimeAttributes>
@@ -69,34 +77,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="첫번째" id="NYa-ju-K2T"/>
+                    <connections>
+                        <outlet property="goToFirstVC" destination="cX0-Na-CLs" id="COW-ug-6zt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950.3816793893129" y="-13.380281690140846"/>
-        </scene>
-        <!--SecondVC-->
-        <scene sceneID="7ez-eG-Xih">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SecondVC" storyboardName="SecondVC" referencedIdentifier="SecondVC" id="dVB-Bt-tJW" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RRZ-rw-8oC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2704.5801526717555" y="-219.01408450704227"/>
-        </scene>
-        <!--ThirdVC-->
-        <scene sceneID="kyJ-ys-VbH">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ThirdVC" storyboardName="ThirdVC" referencedIdentifier="ThirdVC" id="P9i-5B-X8E" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TCd-eZ-Swx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2694.6564885496182" y="-76.056338028169023"/>
-        </scene>
-        <!--DetailVC-->
-        <scene sceneID="7qx-er-rwB">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="DetailVC" storyboardName="DetailVC" referencedIdentifier="DetailVC" id="fW9-Vp-n2h" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2yT-OU-s0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2695.419847328244" y="70.422535211267615"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RD7-yO-fEj">

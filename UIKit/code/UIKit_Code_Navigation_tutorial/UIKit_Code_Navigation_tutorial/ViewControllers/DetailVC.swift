@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController {
+final class DetailVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "디테일"

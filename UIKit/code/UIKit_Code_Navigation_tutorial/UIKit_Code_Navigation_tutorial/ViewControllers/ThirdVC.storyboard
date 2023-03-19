@@ -16,8 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-Qr-tPa">
+                                <rect key="frame" x="20" y="376.66666666666669" width="353" height="98.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFq-22-CaS" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="뒤로가기 - 첫번째VC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="routeName" value="FirstVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="popToVC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d0W-9e-6fk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VB-Bj-POW" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64.333333333333314" width="353" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="뒤로가기 - 두번째VC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="RouteName" value="SecondVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="popToVC:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hqZ-VM-PcK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7VB-Bj-POW" firstAttribute="leading" secondItem="bqS-Qr-tPa" secondAttribute="leading" id="4nz-ek-XGX"/>
+                                    <constraint firstAttribute="trailing" secondItem="7VB-Bj-POW" secondAttribute="trailing" id="E2B-5U-EAK"/>
+                                    <constraint firstItem="vFq-22-CaS" firstAttribute="leading" secondItem="bqS-Qr-tPa" secondAttribute="leading" id="OC0-cu-5kY"/>
+                                    <constraint firstAttribute="trailing" secondItem="vFq-22-CaS" secondAttribute="trailing" id="d7x-Ep-9cV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bqS-Qr-tPa" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9BC-7C-Mzd"/>
+                            <constraint firstItem="bqS-Qr-tPa" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Ilg-4f-GlJ"/>
+                            <constraint firstItem="bqS-Qr-tPa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="dDm-TA-l7A"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
