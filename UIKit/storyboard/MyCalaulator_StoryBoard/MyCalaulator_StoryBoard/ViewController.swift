@@ -7,6 +7,7 @@
 
 import UIKit
 
+// 계산 열거형
 enum Operation {
   case add
   case subtract
@@ -40,52 +41,52 @@ final class ViewController: UIViewController {
       displayNumber += sender
       numberOutputLabel.text = displayNumber
     }
-    print(sender)
+    print(#fileID, #function, #line, "- 눌린 숫자 : \(sender)")
   }
 
 //  AC버튼 눌렀을 때
   @IBAction func clearButtonTapped(_ sender: UIButton) {
-    displayNumber = ""
-    firstOperand = ""
-    secondOperand = ""
-    result = ""
+    displayNumber.removeAll()
+    firstOperand.removeAll()
+    secondOperand.removeAll()
+    result.removeAll()
     currentOperation = .unknown
     numberOutputLabel.text = "0"
+    print(#fileID, #function, #line, "- AC버튼이 눌렸다.")
   }
-
 //    .버튼 눌렀을 때
   @IBAction func dotButtonTapped(_ sender: UIButton) {
     if displayNumber.count < 8, !displayNumber.contains(".") {
       displayNumber += displayNumber.isEmpty ? "0." : "."
       numberOutputLabel.text = displayNumber
     }
+    print(#fileID, #function, #line, "- .버튼이 눌렸다.")
   }
-
 //  나누기
   @IBAction func divideButtonTapped(_ sender: UIButton) {
     operation(operation: .divide)
+    print(#fileID, #function, #line, "- 나누기버튼이 눌렸다.")
   }
-
 //  곱하기
   @IBAction func multipleButtonTapped(_ sender: UIButton) {
     operation(operation: .multiply)
+    print(#fileID, #function, #line, "- 곱하기버튼이 눌렸다.")
   }
-
 //  빼기
   @IBAction func subtrackButtonTapped(_ sender: UIButton) {
     operation(operation: .subtract)
+    print(#fileID, #function, #line, "- 빼기 버튼이 눌렸다.")
   }
-
 //  더하기
   @IBAction func addButtonTapped(_ sender: UIButton) {
     operation(operation: .add)
+    print(#fileID, #function, #line, "- 더하기 버튼이 눌렸다.")
   }
-
 //  결과값
   @IBAction func equalButtonTapped(_ sender: UIButton) {
     operation(operation: currentOperation)
+    print(#fileID, #function, #line, "- 결과는 : \(result)")
   }
-
 
 }
 
