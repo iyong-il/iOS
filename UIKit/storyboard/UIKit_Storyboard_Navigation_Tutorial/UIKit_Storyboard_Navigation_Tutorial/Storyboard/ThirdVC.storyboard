@@ -23,32 +23,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCF-K5-WXK">
-                                <rect key="frame" x="65" y="683" width="263" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - unwindSegue"/>
-                                <connections>
-                                    <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="ope-VI-Dae"/>
-                                    <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="xCj-Bk-1DD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-ka-GT5">
-                                <rect key="frame" x="75.666666666666686" y="598" width="242" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - popToRoot"/>
-                                <connections>
-                                    <action selector="goBackToFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="A0t-Y0-cBw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-su-F63">
-                                <rect key="frame" x="65" y="513" width="263" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="두번째 VC로 이동 - unwindSegue"/>
-                                <connections>
-                                    <action selector="goBackFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="YkD-Js-oOR"/>
-                                    <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="Kg9-6H-gBX"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ZH8-Qk-AcB">
+                                <rect key="frame" x="65.333333333333343" y="567.66666666666663" width="262.66666666666663" height="200.33333333333337"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-su-F63">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.66666666666669" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="두번째 VC로 이동 - unwindSegue"/>
+                                        <connections>
+                                            <action selector="goBackFirstVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="YkD-Js-oOR"/>
+                                            <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="Kg9-6H-gBX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-ka-GT5">
+                                        <rect key="frame" x="0.0" y="55.333333333333371" width="262.66666666666669" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - popToVC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="route" value="FirstVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="popToVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="pL6-qR-5FK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR4-Mv-Ne3">
+                                        <rect key="frame" x="0.0" y="110.66666666666674" width="262.66666666666669" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="두번째 VC로 이동 - popToVC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="route" value="SecondVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="popToVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="MPL-r9-3sS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCF-K5-WXK">
+                                        <rect key="frame" x="0.0" y="166" width="262.66666666666669" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - unwindSegue"/>
+                                        <connections>
+                                            <action selector="goBackToFirst:" destination="bCR-YX-heH" eventType="touchUpInside" id="ope-VI-Dae"/>
+                                            <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToFirstButtonPressedWithUnwindSegue:" id="xCj-Bk-1DD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cqM-ka-GT5" firstAttribute="leading" secondItem="ZH8-Qk-AcB" secondAttribute="leading" id="3TZ-5k-fhU"/>
+                                    <constraint firstItem="RR4-Mv-Ne3" firstAttribute="leading" secondItem="ZH8-Qk-AcB" secondAttribute="leading" id="nVw-qu-9F0"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세번째 VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M9-La-5nC">
                                 <rect key="frame" x="133.33333333333334" y="322" width="126.66666666666666" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -59,16 +82,12 @@
                         <viewLayoutGuide key="safeArea" id="Kdr-it-eQ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cqM-ka-GT5" firstAttribute="top" secondItem="1vh-su-F63" secondAttribute="bottom" constant="50" id="4Xj-3P-TT6"/>
                             <constraint firstItem="9M9-La-5nC" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="Lnz-qW-Fkw"/>
-                            <constraint firstItem="Kdr-it-eQ4" firstAttribute="bottom" secondItem="iCF-K5-WXK" secondAttribute="bottom" constant="100" id="NvN-Fw-QdW"/>
                             <constraint firstItem="cZ5-rz-0An" firstAttribute="top" secondItem="9M9-La-5nC" secondAttribute="bottom" constant="50" id="Rpi-9v-umv"/>
                             <constraint firstItem="cZ5-rz-0An" firstAttribute="centerY" secondItem="mek-T9-r9O" secondAttribute="centerY" id="WCv-XB-lUA"/>
-                            <constraint firstItem="1vh-su-F63" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="Z1j-pa-gre"/>
-                            <constraint firstItem="iCF-K5-WXK" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="gV2-fT-sxb"/>
+                            <constraint firstItem="ZH8-Qk-AcB" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="a4a-1K-8Ru"/>
                             <constraint firstItem="cZ5-rz-0An" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="hbE-Uv-JIY"/>
-                            <constraint firstItem="cqM-ka-GT5" firstAttribute="centerX" secondItem="mek-T9-r9O" secondAttribute="centerX" id="mDu-Bt-O53"/>
-                            <constraint firstItem="iCF-K5-WXK" firstAttribute="top" secondItem="cqM-ka-GT5" secondAttribute="bottom" constant="50" id="mhl-Kr-RS1"/>
+                            <constraint firstItem="Kdr-it-eQ4" firstAttribute="bottom" secondItem="ZH8-Qk-AcB" secondAttribute="bottom" constant="50" id="vjS-Zf-g8c"/>
                         </constraints>
                     </view>
                     <connections>

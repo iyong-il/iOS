@@ -128,17 +128,17 @@ final class FirstVC: UIViewController {
   // UIButton을 커스텀하는 방식
   @IBAction func handlePushAction(_ sender: NavigationButton) {
     // UIButton일 경우 sender.currentTitle로 해도 좋을 것 같다.
-    let sender = sender.route
+    let sender = sender.routeVC
     print(#fileID, #function, #line, "- \(sender)")
 
     var vc: UIViewController? = nil
 
     switch sender {
-    case "SecondVC":
+    case .secondVC:
       vc = SecondVC.getInstance()
-    case "ThirdVC":
+    case .thirdVC:
       vc = ThirdVC.getInstance()
-    case "DetailVC":
+    case .detailVC:
       vc = DetailVC.getInstance()
     default:
       break

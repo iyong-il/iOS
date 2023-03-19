@@ -50,10 +50,34 @@ final class ThirdVC: UIViewController {
     print(#fileID, #function, #line, "- 세번째VC에서 unwindSegue로 두번째VC 이동")
   }
 
-  @IBAction func goBackToFirstVC(_ sender: UIButton) {
+  @IBAction func popToVC(_ sender: NavigationButton) {
     print(#fileID, #function, #line, "- 세번째VC에서 popToroot로 첫번째VC 이동")
-    self.navigationController?.popToRootViewController(animated: true)
+//    self.navigationController?.popToRootViewController(animated: true)
+    guard let viewControllers = self.navigationController?.viewControllers else { return }
+    var vc: UIViewController? = nil
+
+    switch sender.routeVC {
+    case  .firstVC:
+      vc = viewControllers.first(where: {$0 is FirstVC})
+    case .secondVC:
+      vc = viewControllers.first(where: {$0 is SecondVC})
+    default:
+      break
+    }
+    
+    guard let vc = vc else { return }
+    self.navigationController?.popToViewController(vc, animated: true)
+
   }
+
+  // 여기는 현재 사용하지 않음
+  @IBAction func gobackToSecond(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 세번째VC에서 poptoView로 두번째 VC 이동")
+    
+//    self.navigationController?.popToViewController(navigationController!.viewControllers, animated: true)
+
+  }
+
 
   @IBAction func goBackToFirst(_ sender: UIButton) {
     print(#fileID, #function, #line, "- 세번째VC에서 unwindSegue로 첫번째VC 이동")
