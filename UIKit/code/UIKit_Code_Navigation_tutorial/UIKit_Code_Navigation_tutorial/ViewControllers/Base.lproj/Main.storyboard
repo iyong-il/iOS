@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XZ1-z1-rsi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--첫번째-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstVC" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jO6-iZ-3fU">
+                                <rect key="frame" x="20" y="349.66666666666669" width="353" height="153"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX0-Na-CLs" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="커스텀 - 두번째VC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="routeName" value="SecondVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taW-8i-j71"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnf-JC-w8E" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="59.333333333333314" width="353" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="커스텀 - 세번째VC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="routeName" value="ThirdVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TcB-Tq-eIj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-kQ-ON1" customClass="NavigationButton" customModule="UIKit_Code_Navigation_tutorial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118.66666666666661" width="353" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="커스텀 - 디테일VC"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="routeName" value="DetailVC"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6z-gn-N8r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fnf-JC-w8E" secondAttribute="trailing" id="Ocr-j9-Cg0"/>
+                                    <constraint firstItem="fnf-JC-w8E" firstAttribute="leading" secondItem="jO6-iZ-3fU" secondAttribute="leading" id="bm5-19-9v3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jO6-iZ-3fU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1k7-b0-rmX"/>
+                            <constraint firstItem="jO6-iZ-3fU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B1w-w0-qaY"/>
+                            <constraint firstItem="jO6-iZ-3fU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gna-cL-dhD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="첫번째" id="NYa-ju-K2T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950.3816793893129" y="-13.380281690140846"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="7ez-eG-Xih">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SecondVC" storyboardName="SecondVC" referencedIdentifier="SecondVC" id="dVB-Bt-tJW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRZ-rw-8oC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704.5801526717555" y="-219.01408450704227"/>
+        </scene>
+        <!--ThirdVC-->
+        <scene sceneID="kyJ-ys-VbH">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ThirdVC" storyboardName="ThirdVC" referencedIdentifier="ThirdVC" id="P9i-5B-X8E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCd-eZ-Swx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694.6564885496182" y="-76.056338028169023"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="7qx-er-rwB">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DetailVC" storyboardName="DetailVC" referencedIdentifier="DetailVC" id="fW9-Vp-n2h" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yT-OU-s0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2695.419847328244" y="70.422535211267615"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RD7-yO-fEj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XZ1-z1-rsi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SrM-ce-hwm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KWA-Pb-dop"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcB-Qi-mc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.6641221374045" y="-13.380281690140846"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
