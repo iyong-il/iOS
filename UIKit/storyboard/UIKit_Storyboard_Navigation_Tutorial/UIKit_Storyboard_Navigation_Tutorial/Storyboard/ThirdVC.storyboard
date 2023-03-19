@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ZH8-Qk-AcB">
-                                <rect key="frame" x="65.333333333333343" y="567.66666666666663" width="262.66666666666663" height="200.33333333333337"/>
+                                <rect key="frame" x="65.333333333333343" y="678.33333333333337" width="262.66666666666663" height="89.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-su-F63">
                                         <rect key="frame" x="0.0" y="0.0" width="262.66666666666669" height="34.333333333333336"/>
@@ -35,30 +35,8 @@
                                             <segue destination="6Wo-uY-0wU" kind="unwind" unwindAction="goBackToSecondVCWithUnwindSegue:" id="Kg9-6H-gBX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-ka-GT5">
-                                        <rect key="frame" x="0.0" y="55.333333333333371" width="262.66666666666669" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - popToVC"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="route" value="FirstVC"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="popToVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="pL6-qR-5FK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR4-Mv-Ne3">
-                                        <rect key="frame" x="0.0" y="110.66666666666674" width="262.66666666666669" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="두번째 VC로 이동 - popToVC"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="route" value="SecondVC"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="popToVC:" destination="bCR-YX-heH" eventType="touchUpInside" id="MPL-r9-3sS"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCF-K5-WXK">
-                                        <rect key="frame" x="0.0" y="166" width="262.66666666666669" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333258" width="262.66666666666669" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="첫번째 VC로 이동 - unwindSegue"/>
                                         <connections>
@@ -67,10 +45,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="cqM-ka-GT5" firstAttribute="leading" secondItem="ZH8-Qk-AcB" secondAttribute="leading" id="3TZ-5k-fhU"/>
-                                    <constraint firstItem="RR4-Mv-Ne3" firstAttribute="leading" secondItem="ZH8-Qk-AcB" secondAttribute="leading" id="nVw-qu-9F0"/>
-                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세번째 VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9M9-La-5nC">
                                 <rect key="frame" x="133.33333333333334" y="322" width="126.66666666666666" height="36"/>
