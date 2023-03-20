@@ -45,6 +45,7 @@ class CustomPopUpViewController: UIViewController {
   @IBAction func onBlogButtonTapped(_ sender: UIButton) {
     print(#fileID, #function, #line, "- 블로그가기 버튼이 눌렸다.")
 
+    // VC에서 등록한 노티피케이션을 가져다 쓰기만 하면 된다.
     NotificationCenter.default.post(name: Notification.Name(notificationName), object: nil)
     self.dismiss(animated: true)
   }

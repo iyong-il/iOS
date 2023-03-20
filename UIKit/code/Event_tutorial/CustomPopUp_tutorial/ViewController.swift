@@ -14,15 +14,17 @@ let notificationName = "buttonClickNotification"
 
 class ViewController: UIViewController, PopUpDelegate {
 
-
+  // MARK: - 속성
   @IBOutlet weak var myWebView: WKWebView!
   @IBOutlet weak var createPopUpBtn: UIButton!
 
 
+  // 소멸자 - 노티피케이션에는 필수
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
 
+  // MARK: - 라이프사이클
   override func viewDidLoad() {
     super.viewDidLoad()
     // 노티피케이션이라는 안테나를 장착한다는 느낌
@@ -30,6 +32,7 @@ class ViewController: UIViewController, PopUpDelegate {
 
   }
 
+  // MARK: - 메서드
   @objc fileprivate func loadWebView() {
     print(#fileID, #function, #line, "VC - loadWebView()")
     guard let myBlog = URL(string: "https://i-yongil.tistory.com/") else { return }
@@ -42,7 +45,7 @@ class ViewController: UIViewController, PopUpDelegate {
     // 스토리보드 가져오기
     let storyboard = UIStoryboard.init(name: "PopUp", bundle: nil)
     // 스토리보드를 통해 뷰컨트롤러 가져오기
-    let customPopUpVC = storyboard.instantiateViewController(withIdentifier: "AlertPopUpVC") as! CustomPopUpViewController
+    guard let customPopUpVC = storyboard.instantiateViewController(withIdentifier: "AlertPopUpVC") as? CustomPopUpViewController else { return }
     // 뷰컨트롤러가 보여지는 스타일
     customPopUpVC.modalPresentationStyle = .overCurrentContext
     // 뷰컨트롤러가 사라지는 스타일
