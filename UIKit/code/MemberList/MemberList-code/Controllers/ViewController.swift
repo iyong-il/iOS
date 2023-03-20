@@ -10,6 +10,8 @@ import SnapKit
 import Then
 
 final class ViewController: UIViewController {
+
+  // MARK: - 속성
   // 테이블뷰를 만들때는 뷰를 따로 분리하지 않는다.
   // 셀만 따로 분리해낸다.
   private let tableView = UITableView()
@@ -23,6 +25,12 @@ final class ViewController: UIViewController {
     let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(plusButtonTapped))
     return button
   }()
+
+  // MARK: - 라이프사이클
+  override func loadView() {
+    super.loadView()
+    self.view = tableView
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -40,11 +48,12 @@ final class ViewController: UIViewController {
   //    tableView.reloadData()
   //  }
 
-  // MARK: - 데이터를 가져오는 메서드
+  // MARK: - 메서드
+  // 데이터를 가져오는 메서드
   private func setupDatas() {
     memberListManager.makeMembersListDatas()
   }
-  // MARK: - 테이블뷰를 구성하는 메서드
+  // 테이블뷰를 구성하는 메서드
   private func setupTableView() {
     tableView.dataSource = self
     tableView.delegate = self
@@ -54,13 +63,6 @@ final class ViewController: UIViewController {
 
     // 테이블뷰의 기본 색상은 검정이기 때문에 설정해줘야 한다.
     self.view.backgroundColor = .white
-    self.view.addSubview(tableView)
-    tableView.snp.makeConstraints {
-      $0.top.equalToSuperview()
-      $0.left.equalToSuperview()
-      $0.right.equalToSuperview()
-      $0.bottom.equalToSuperview()
-    }
   }
 
   private func setupNavBar() {
@@ -80,7 +82,7 @@ final class ViewController: UIViewController {
   }
 // MARK: - 플러스 버튼 selector
   @objc func plusButtonTapped() {
-    let detailVC = DetailViewController()
+    let detailVC = DetailVC()
     detailVC.delegate = self
 
     navigationController?.pushViewController(detailVC, animated: true)
@@ -99,7 +101,7 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     // 공식이다.
     // 구체적인 타입으로 변형해줘야 한다.
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberTableViewCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as? MemberTableViewCell else { return UITableViewCell() }
     // MARK: - 방법 1 (기존의 방법)
     // 서브트스립트를 구현했기 때문에 가능한 방법이다.
 //        cell.mainImageView.image = memberListManager[indexPath.row].memeberImage
@@ -121,7 +123,7 @@ extension ViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     // 다음화면으로 넘어가는 코드구현
-    let detailVC = DetailViewController()
+    let detailVC = DetailVC()
     detailVC.member = memberListManager.getMemberList()[indexPath.row]
     detailVC.delegate = self
 

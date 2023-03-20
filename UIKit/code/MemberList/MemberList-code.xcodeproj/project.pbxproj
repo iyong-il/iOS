@@ -18,7 +18,7 @@
 		B1958C2828E3C21500340ED6 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1958C2728E3C21500340ED6 /* Member.swift */; };
 		B1958C2A28E3C58000340ED6 /* MemberListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1958C2928E3C58000340ED6 /* MemberListManager.swift */; };
 		B1958C2C28E3CA7400340ED6 /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1958C2B28E3CA7400340ED6 /* MemberTableViewCell.swift */; };
-		B199E44328E46953005622E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199E44228E46953005622E7 /* DetailViewController.swift */; };
+		B199E44328E46953005622E7 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199E44228E46953005622E7 /* DetailVC.swift */; };
 		B199E44528E46973005622E7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B199E44428E46973005622E7 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		B1958C2728E3C21500340ED6 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		B1958C2928E3C58000340ED6 /* MemberListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListManager.swift; sourceTree = "<group>"; };
 		B1958C2B28E3CA7400340ED6 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
-		B199E44228E46953005622E7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B199E44228E46953005622E7 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		B199E44428E46973005622E7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1204C6D29C885A2002676DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B199E44428E46973005622E7 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1204C6E29C885EE002676DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B1958C2B28E3CA7400340ED6 /* MemberTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B1958BFE28E3BF0D00340ED6 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B1958C0E28E3BF0D00340ED6 /* ViewController.swift */,
-				B199E44228E46953005622E7 /* DetailViewController.swift */,
+				B199E44228E46953005622E7 /* DetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,8 +111,8 @@
 		B1958C2528E3C19400340ED6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1958C2B28E3CA7400340ED6 /* MemberTableViewCell.swift */,
-				B199E44428E46973005622E7 /* DetailView.swift */,
+				B1204C6E29C885EE002676DB /* Cell */,
+				B1204C6D29C885A2002676DB /* View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,7 +212,7 @@
 				B1958C0B28E3BF0D00340ED6 /* AppDelegate.swift in Sources */,
 				B1958C0D28E3BF0D00340ED6 /* SceneDelegate.swift in Sources */,
 				B1958C2828E3C21500340ED6 /* Member.swift in Sources */,
-				B199E44328E46953005622E7 /* DetailViewController.swift in Sources */,
+				B199E44328E46953005622E7 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import UIKit
 // 기존에는 info도 바꿔줘야 했으나 지금은 괜찮음
 import PhotosUI
 
-final class DetailViewController: UIViewController {
+final class DetailVC: UIViewController {
 
   private let detailView = DetailView()
 
@@ -55,10 +55,6 @@ final class DetailViewController: UIViewController {
       var newMember =
       Member(name: name, age: age, phone: phoneNumber, address: address)
       newMember.memeberImage = detailView.mainImageView.image
-      // 델리게이트방식이 아닌 구현방법
-      //            let index = navigationController!.viewControllers.count - 2
-      //            let vc = navigationController?.viewControllers[index] as! ViewController
-      //            vc.memberListManager.makeNewMember(newMember)
 
       // 커스텀 델리게이트 방식으로 구현
       delegate?.addNewMember(newMember)
@@ -74,14 +70,7 @@ final class DetailViewController: UIViewController {
       member.age = Int(detailView.ageTextField.text!) ?? 0
       member.phone = detailView.phoneNumberTextField.text ?? ""
       member.address = detailView.addressTextField.text ?? ""
-
       setupData()
-
-      // 델리게이트방식이 아닌 구현방법 - 어려운방식
-      //            let index = navigationController!.viewControllers.count - 2
-      //            let vc = navigationController?.viewControllers[index] as! ViewController
-      //            vc.memberListManager.updateMemberInfo(Index: memberId, member!)
-
       //  커스텀 델리게이트 방식으로 구현 - 추천방식
       delegate?.update(index: memberId, member)
     }
@@ -124,7 +113,7 @@ final class DetailViewController: UIViewController {
 // MARK: - 확장 / 피커뷰 델리게이트
 // 피커뷰를 사용하기 위해서는 이 프로토콜을 채택해야 한다. - 델리게이트패턴으로 되어있다.
 // 델리게이트 패턴이기 때문에 대리자 설정 필수
-extension DetailViewController: PHPickerViewControllerDelegate {
+extension DetailVC: PHPickerViewControllerDelegate {
 
   // 필수구현 메서드 - 사진이 선택되면 실행하는 메서드
   func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
