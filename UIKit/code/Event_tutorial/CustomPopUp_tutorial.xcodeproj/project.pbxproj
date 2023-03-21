@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B164427F29C9DB370037D97B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164427E29C9DB370037D97B /* Notification.swift */; };
+		B164428129C9E0640037D97B /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164428029C9E0640037D97B /* URL.swift */; };
 		F227F04E24905A01009FE2A5 /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227F04D24905A01009FE2A5 /* PopUpDelegate.swift */; };
 		F265A0C8248C021500780D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265A0C7248C021500780D17 /* AppDelegate.swift */; };
 		F265A0CA248C021500780D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265A0C9248C021500780D17 /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B164427E29C9DB370037D97B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		B164428029C9E0640037D97B /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		F227F04D24905A01009FE2A5 /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
 		F265A0C4248C021500780D17 /* CustomPopUp_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPopUp_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F265A0C7248C021500780D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B164428229C9E1D50037D97B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B164427E29C9DB370037D97B /* Notification.swift */,
+				B164428029C9E0640037D97B /* URL.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B164428329C9E1EA0037D97B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F265A0CB248C021500780D17 /* ViewController.swift */,
+				F265A0CD248C021500780D17 /* Main.storyboard */,
+				F265A0DD248C047300780D17 /* CustomPopUpViewController.swift */,
+				F265A0DB248C029600780D17 /* PopUp.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B164428429C9E2250037D97B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F227F04D24905A01009FE2A5 /* PopUpDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F265A0BB248C021500780D17 = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +100,12 @@
 			children = (
 				F265A0C7248C021500780D17 /* AppDelegate.swift */,
 				F265A0C9248C021500780D17 /* SceneDelegate.swift */,
-				F265A0CB248C021500780D17 /* ViewController.swift */,
+				B164428229C9E1D50037D97B /* Constants */,
+				B164428429C9E2250037D97B /* Utils */,
+				B164428329C9E1EA0037D97B /* Controllers */,
 				F265A0D0248C021700780D17 /* Assets.xcassets */,
-				F265A0CD248C021500780D17 /* Main.storyboard */,
-				F265A0DB248C029600780D17 /* PopUp.storyboard */,
 				F265A0D2248C021700780D17 /* LaunchScreen.storyboard */,
 				F265A0D5248C021700780D17 /* Info.plist */,
-				F265A0DD248C047300780D17 /* CustomPopUpViewController.swift */,
-				F227F04D24905A01009FE2A5 /* PopUpDelegate.swift */,
 			);
 			path = CustomPopUp_tutorial;
 			sourceTree = "<group>";
@@ -162,6 +192,8 @@
 			files = (
 				F227F04E24905A01009FE2A5 /* PopUpDelegate.swift in Sources */,
 				F265A0DE248C047300780D17 /* CustomPopUpViewController.swift in Sources */,
+				B164427F29C9DB370037D97B /* Notification.swift in Sources */,
+				B164428129C9E0640037D97B /* URL.swift in Sources */,
 				F265A0CC248C021500780D17 /* ViewController.swift in Sources */,
 				F265A0C8248C021500780D17 /* AppDelegate.swift in Sources */,
 				F265A0CA248C021500780D17 /* SceneDelegate.swift in Sources */,

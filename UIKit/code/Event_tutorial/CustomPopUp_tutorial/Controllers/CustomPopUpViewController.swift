@@ -8,26 +8,26 @@
 
 import UIKit
 
-class CustomPopUpViewController: UIViewController {
+final class CustomPopUpViewController: UIViewController {
 
+  // MARK: - 속성
   @IBOutlet weak var contentView: UIView!
+
   @IBOutlet weak var bgBtn: UIButton!
   @IBOutlet weak var subscribeBtn: UIButton!
-
   @IBOutlet weak var openChatBtn: UIButton!
-
   @IBOutlet weak var blogBtn: UIButton!
-
-
 
   var subscribeBtnCompletionClosure: (() -> Void)?
 
   var myPopUpDelegate : PopUpDelegate?
 
+
+  // MARK: - 라이프사이클
   override func viewDidLoad() {
     super.viewDidLoad()
+    print(#fileID, #function, #line, "- 팝업VC가 올라왔다.")
 
-    print("CustomPopUpViewController - viewDidLoad() called")
     contentView.layer.cornerRadius = 30
     subscribeBtn.layer.cornerRadius = 10
     openChatBtn.layer.cornerRadius = 10
@@ -35,23 +35,24 @@ class CustomPopUpViewController: UIViewController {
   }
 
 
-
-  //MARK: - IBActions
-  @IBAction func onBgBtnClicked(_ sender: UIButton) {
-    print("CustomPopUpViewController - onBgBtnClicked() called")
-    self.dismiss(animated: true, completion: nil)
-  }
-
+  //MARK: - 메서드
   @IBAction func onBlogButtonTapped(_ sender: UIButton) {
-    print(#fileID, #function, #line, "- 블로그가기 버튼이 눌렸다.")
+    print(#fileID, #function, #line, "- 블로그가기 버튼이 눌렸다. / 노티피케이션")
 
     // VC에서 등록한 노티피케이션을 가져다 쓰기만 하면 된다.
-    NotificationCenter.default.post(name: Notification.Name(notificationName), object: nil)
+    NotificationCenter.default.post(name: .buttonClickNotification, object: nil)
+    self.dismiss(animated: true)
+  }
+
+  @IBAction func onOpenChatBtnClicked(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 오픈깨톡방가기 버튼이 눌렸다.")
+
+    myPopUpDelegate?.onOpenChatBtnClicked()
     self.dismiss(animated: true)
   }
 
   @IBAction func onSubscribeBtnClicked(_ sender: UIButton) {
-    print("CustomPopUpViewController - onSubscribeBtnClicked() called")
+    print(#fileID, #function, #line, "- 구독하러가기 버튼이 눌렸다. / 후행클로저")
 
     self.dismiss(animated: true, completion: nil)
 
@@ -62,13 +63,10 @@ class CustomPopUpViewController: UIViewController {
     }
   }
 
-  @IBAction func onOpenChatBtnClicked(_ sender: UIButton) {
-    print("CustomPopUpViewController - onOpenChatBtnClicked() called")
+  @IBAction func onBgBtnClicked(_ sender: UIButton) {
+    print(#fileID, #function, #line, "- 배경 터치시 팝업이 내려간다.")
 
-    myPopUpDelegate?.onOpenChatBtnClicked()
     self.dismiss(animated: true, completion: nil)
-
   }
-
 
 }

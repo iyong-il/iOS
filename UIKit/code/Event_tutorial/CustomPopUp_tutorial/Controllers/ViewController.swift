@@ -9,10 +9,7 @@
 import UIKit
 import WebKit
 
-// 노티피케이션 이름설정
-let notificationName = "buttonClickNotification"
-
-class ViewController: UIViewController, PopUpDelegate {
+final class ViewController: UIViewController {
 
   // MARK: - 속성
   @IBOutlet weak var myWebView: WKWebView!
@@ -21,6 +18,7 @@ class ViewController: UIViewController, PopUpDelegate {
 
   // 소멸자 - 노티피케이션에는 필수
   deinit {
+    print(#fileID, #function, #line, "- deinit 호출")
     NotificationCenter.default.removeObserver(self)
   }
 
@@ -28,22 +26,23 @@ class ViewController: UIViewController, PopUpDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     // 노티피케이션이라는 안테나를 장착한다는 느낌
-    NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: NSNotification.Name(notificationName), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: .buttonClickNotification, object: nil)
 
   }
 
   // MARK: - 메서드
   @objc fileprivate func loadWebView() {
-    print(#fileID, #function, #line, "VC - loadWebView()")
-    guard let myBlog = URL(string: "https://i-yongil.tistory.com/") else { return }
+    print(#fileID, #function, #line, "⭐️블로그화면이 올라온다. / 노티피케이션")
+    guard let myBlog = URL.blogURL else { return }
     self.myWebView.load(URLRequest(url: myBlog))
   }
 
   @IBAction func onCreatePopUpBtnClicked(_ sender: UIButton) {
-    print("ViewController - onCreatePopUpBtnClicked() called")
+    print(#fileID, #function, #line, "- 팝업띄우기 버튼이 눌렸다.")
+
 
     // 스토리보드 가져오기
-    let storyboard = UIStoryboard.init(name: "PopUp", bundle: nil)
+    let storyboard = UIStoryboard(name: "PopUp", bundle: nil)
     // 스토리보드를 통해 뷰컨트롤러 가져오기
     guard let customPopUpVC = storyboard.instantiateViewController(withIdentifier: "AlertPopUpVC") as? CustomPopUpViewController else { return }
     // 뷰컨트롤러가 보여지는 스타일
@@ -52,9 +51,10 @@ class ViewController: UIViewController, PopUpDelegate {
     customPopUpVC.modalTransitionStyle = .crossDissolve
 
     customPopUpVC.subscribeBtnCompletionClosure = {
-      print("컴플레션 블럭이 호출되었다.")
-      let myChannelUrl = URL(string: "https://www.youtube.com/channel/UCutO2H_AVmWHbzvE92rpxjA?view_as=subscriber")
-      self.myWebView.load(URLRequest(url: myChannelUrl!))
+      print(#fileID, #function, #line, "- ⭐️구독화면이 올라온다. / 후행클로저")
+
+      guard let myChannelUrl = URL.youtubeURL else { return }
+      self.myWebView.load(URLRequest(url: myChannelUrl))
     }
 
     customPopUpVC.myPopUpDelegate = self
@@ -62,12 +62,16 @@ class ViewController: UIViewController, PopUpDelegate {
     self.present(customPopUpVC, animated: true, completion: nil)
   }
 
-  //MARK: - PopUpDelegate methods
-  func onOpenChatBtnClicked() {
-    print("ViewController - onOpenChatBtnClicked() called")
-    let myChannelUrl = URL(string: "https://open.kakao.com/o/gxOOKJec")
-    self.myWebView.load(URLRequest(url: myChannelUrl!))
-  }
+
 
 }
 
+// MARK: - 확장 / 델리게이트
+extension ViewController: PopUpDelegate {
+
+  func onOpenChatBtnClicked() {
+    print(#fileID, #function, #line, "- ⭐️오픈깨톡방가기 화면이 올라온다. / 델리게이트")
+    guard let myChannelUrl = URL.openChatURL else { return }
+    self.myWebView.load(URLRequest(url: myChannelUrl))
+  }
+}
