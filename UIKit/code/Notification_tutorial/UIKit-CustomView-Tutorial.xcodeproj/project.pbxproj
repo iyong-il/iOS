@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B164428A29C9E87E0037D97B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164428929C9E87E0037D97B /* Notification.swift */; };
 		F26F0F6A297D930F009EDA27 /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F0F69297D930F009EDA27 /* CodeInputView.swift */; };
 		F2BB4F8F294CD57B006E804D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BB4F8E294CD57B006E804D /* AppDelegate.swift */; };
 		F2BB4F91294CD57B006E804D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BB4F90294CD57B006E804D /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B164428929C9E87E0037D97B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		F26F0F69297D930F009EDA27 /* CodeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
 		F2BB4F8B294CD57B006E804D /* UIKit-CustomView-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-CustomView-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2BB4F8E294CD57B006E804D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B164428529C9E82D0037D97B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2BB4F94294CD57B006E804D /* Main.storyboard */,
+				F2BB4F92294CD57B006E804D /* ViewController.swift */,
+				F2C24F29297E5FCE003F5376 /* ParentVC.swift */,
+				F2C24F2B297E5FF2003F5376 /* ChildVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B164428629C9E84E0037D97B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2BB4FA4294CD6EC006E804D /* InputView.swift */,
+				F2BB4FA2294CD695006E804D /* InputView.xib */,
+				F26F0F69297D930F009EDA27 /* CodeInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B164428729C9E8640037D97B /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				F2C49D792980340600ACD846 /* ChildSwiftUiView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		B164428829C9E8720037D97B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B164428929C9E87E0037D97B /* Notification.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F2BB4F82294CD57B006E804D = {
 			isa = PBXGroup;
 			children = (
@@ -70,14 +109,10 @@
 			children = (
 				F2BB4F8E294CD57B006E804D /* AppDelegate.swift */,
 				F2BB4F90294CD57B006E804D /* SceneDelegate.swift */,
-				F2C24F29297E5FCE003F5376 /* ParentVC.swift */,
-				F2C49D792980340600ACD846 /* ChildSwiftUiView.swift */,
-				F2C24F2B297E5FF2003F5376 /* ChildVC.swift */,
-				F2BB4F92294CD57B006E804D /* ViewController.swift */,
-				F26F0F69297D930F009EDA27 /* CodeInputView.swift */,
-				F2BB4FA2294CD695006E804D /* InputView.xib */,
-				F2BB4FA4294CD6EC006E804D /* InputView.swift */,
-				F2BB4F94294CD57B006E804D /* Main.storyboard */,
+				B164428829C9E8720037D97B /* Utils */,
+				B164428729C9E8640037D97B /* SwiftUI */,
+				B164428629C9E84E0037D97B /* Views */,
+				B164428529C9E82D0037D97B /* Controllers */,
 				F2BB4F97294CD57D006E804D /* Assets.xcassets */,
 				F2BB4F99294CD57D006E804D /* LaunchScreen.storyboard */,
 				F2BB4F9C294CD57D006E804D /* Info.plist */,
@@ -159,6 +194,7 @@
 			files = (
 				F2BB4F93294CD57B006E804D /* ViewController.swift in Sources */,
 				F26F0F6A297D930F009EDA27 /* CodeInputView.swift in Sources */,
+				B164428A29C9E87E0037D97B /* Notification.swift in Sources */,
 				F2C24F2C297E5FF2003F5376 /* ChildVC.swift in Sources */,
 				F2C49D7A2980340600ACD846 /* ChildSwiftUiView.swift in Sources */,
 				F2C24F2A297E5FCE003F5376 /* ParentVC.swift in Sources */,
