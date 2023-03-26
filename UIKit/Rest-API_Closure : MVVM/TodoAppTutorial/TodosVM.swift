@@ -20,7 +20,7 @@ class TodosVM {
     // 선택된 할일들
     var selectedTodoIds: Set<Int> = [] {
         didSet {
-            print(#fileID, #function, #line, "- selectedTodoIds: \(selectedTodoIds)")
+            print(#fileID, #function, #line, "- 선택된 할 일 / selectedTodoIds: \(selectedTodoIds)")
             self.notifySelectedTodoIdsChanged?(Array(selectedTodoIds))
         }
     }
@@ -125,17 +125,17 @@ class TodosVM {
         print(#fileID, #function, #line, "- <#comment#>")
         
         if searchTerm.count < 1 {
-            print("검색어가 없습니다")
+            print(#fileID, #function, #line, "- 검색어가 없습니다")
             return
         }
         
         if isLoading {
-            print("로딩중입니다...")
+            print(#fileID, #function, #line, "- 로딩중입니다...")
             return
         }
         
         guard pageInfo?.hasNext() ?? true else {
-            return print("다음페이지 없음")
+            return print(#fileID, #function, #line, "- 다음페이지 없음")
         }
         
         self.notifySearchDataNotFound?(false)
@@ -185,12 +185,13 @@ class TodosVM {
     
     /// 더 가져오기
     func fetchMore(){
-        print(#fileID, #function, #line, "- ")
+        print(#fileID, #function, #line, "- 셀을 더 가져온다.")
         
         guard let pageInfo = self.pageInfo,
               pageInfo.hasNext(),
               !isLoading else {
-            return print("다음페이지가 없다")
+            return print(#fileID, #function, #line, "- 다음페이지가 없다")
+
         }
         
         if searchTerm.count > 0 { // 검색어가 있으면
@@ -233,7 +234,7 @@ class TodosVM {
     /// 단일 할일 삭제
     /// - Parameter id: 할일 아이디
     func deleteATodo(_ id: Int) {
-        print(#fileID, #function, #line, "- id: \(id)")
+        print(#fileID, #function, #line, "- 단일 할 일이 삭제된다. / id: \(id)")
         
         if isLoading {
             print("로딩중이다")

@@ -24,6 +24,7 @@ final class TodoCell: UITableViewCell {
     // 선택액션
     var onSelectedActionEvent: ((_ id: Int, _ isOn: Bool) -> Void)? = nil
 
+
     // MARK: - 라이프사이클
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +32,6 @@ final class TodoCell: UITableViewCell {
         selectionSwitch.addTarget(self, action: #selector(onSelectionChanged(_:)), for: .valueChanged)
     }
     
-
 
     // MARK: - 메서드
     /// 쎌 데이터 적용
@@ -48,6 +48,8 @@ final class TodoCell: UITableViewCell {
         self.titleLabel.text = "아이디: \(id)"
         self.contentLabel.text = title
         self.selectionSwitch.isOn = selectedTodoIds.contains(id)
+        print(#fileID, #function, #line, "- \(selectedTodoIds.contains(id))")
+
     }
     
     @objc fileprivate func onSelectionChanged(_ sender: UISwitch) {
@@ -57,17 +59,16 @@ final class TodoCell: UITableViewCell {
     }
     
     @IBAction func onEditBtnClicked(_ sender: UIButton) {
-        print(#fileID, #function, #line, "- <#comment#>")
+        print(#fileID, #function, #line, "- 수정버튼이 눌렸다.")
         
         guard let id = cellData?.id,
               let title = cellData?.title else { return }
         
         self.onEditActionEvent?(id, title)
     }
-    
-    
+
     @IBAction func onDeleteBtnClicked(_ sender: UIButton) {
-        print(#fileID, #function, #line, "- <#comment#>")
+        print(#fileID, #function, #line, "- 삭제버튼이 눌렸다.")
         
         guard let id = cellData?.id else { return }
         self.onDeleteActionEvent?(id)

@@ -28,6 +28,9 @@ struct TodosView: View {
                 TodoRow()
                 TodoRow()
                 TodoRow()
+                TodoRow()
+                TodoRow()
+                TodoRow()
             }.listStyle(.plain)
         }
     }

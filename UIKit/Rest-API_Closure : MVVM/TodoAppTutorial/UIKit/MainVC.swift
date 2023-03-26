@@ -172,7 +172,7 @@ final class MainVC: UIViewController {
         
         self.todosVM.notifySelectedTodoIdsChanged = { [weak self] selectedTodoIds in
             guard let self = self else { return }
-            print(#fileID, #function, #line, "")
+            print(#fileID, #function, #line, "할 일이 선택됐다 - MainVC: viewDidLoad")
             DispatchQueue.main.async {
                 
                 let idsInfoString = selectedTodoIds.map{ "\($0)" }.joined(separator: ", ")
