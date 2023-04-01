@@ -28,7 +28,10 @@ final class ViewController: UIViewController {
     // MARK: - 메서드
     @IBAction func tapQuoteGeneratorButton(_ sender: UIButton) {
         DispatchQueue.global().async {
-            let random = (0...4).randomElement() ?? 0 // 0 ~ 4 사이의 난수를 랜덤하게 만들어준다.
+            var random = (0...4).randomElement() ?? 0
+            random = Int(arc4random_uniform(4)) // 0 ~ 4 사이의 난수를 랜덤하게 만들어준다.
+            print(#fileID, #function, #line, "- 명언 번호 : \(random)")
+
             let quote = self.quoteManager[random]
             DispatchQueue.main.async {
                 self.quoteLabel.text = quote.contents

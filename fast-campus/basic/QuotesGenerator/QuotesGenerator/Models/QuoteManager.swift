@@ -7,7 +7,7 @@
 
 import Foundation
 
-class QuoteManager {
+final class QuoteManager {
 
     fileprivate var quoteList : [Quote] = []
 
@@ -26,6 +26,11 @@ class QuoteManager {
     }
 
     subscript(index: Int) -> Quote {
-        return quoteList[index]
+        get {
+            return quoteList[index]
+        }
+        set {
+            quoteList[index] = newValue
+        }
     }
 }
