@@ -13,7 +13,7 @@ import Combine
 extension TodosAPI {
     
     /// 모든 할 일 목록 가져오기
-    static func fetchTodos(page: Int = 1, completion: @escaping (Result<BaseListResponse<Todo>, ApiError>) -> Void){
+    static func fetchTodos(page: Int = 1, completion: @escaping TodosError){
         
         // 1. urlRequest 를 만든다
         
@@ -99,14 +99,14 @@ extension TodosAPI {
         
         // 2. urlSession 으로 API를 호출한다
         // 3. API 호출에 대한 응답을 받는다
-        URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, err in
+        URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
             
             print("data: \(data)")
             print("urlResponse: \(urlResponse)")
-            print("err: \(err)")
+            print("err: \(error)")
             
             
-            if let error = err {
+            if let error = error {
                 return completion(.failure(ApiError.unknown(error)))
             }
                  
@@ -328,7 +328,6 @@ extension TodosAPI {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("application/json", forHTTPHeaderField: "accept")
-        
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let requestParams : [String : Any] = ["title": title, "is_done" : "\(isDone)"]
@@ -412,7 +411,6 @@ extension TodosAPI {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("application/json", forHTTPHeaderField: "accept")
-        
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let requestParams : [String : Any] = ["title": title, "is_done" : "\(isDone)"]

@@ -9,7 +9,9 @@ import Foundation
 import MultipartForm
 
 enum TodosAPI {
-    
+
+    typealias TodosError = (Result<BaseListResponse<Todo>, ApiError>) -> Void
+
     static let version = "v1"
     
     #if DEBUG // 디버그

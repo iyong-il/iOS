@@ -292,7 +292,9 @@ extension MainVC {
     /// 검색어가 입력되었다
     /// - Parameter sender:
     @objc fileprivate func searchTermChanged(_ sender: UITextField){
-        print(#fileID, #function, #line, "- sender: \(String(describing: sender.text))")
+        if let sender = sender.text {
+            print(#fileID, #function, #line, "- sender: \(String(describing: sender))")
+        }
         
         // 검색어가 입력되면 기존 작업 취소
         searchTermInputWorkItem?.cancel()
@@ -321,7 +323,7 @@ extension MainVC {
     /// 리프레시 처리
     /// - Parameter sender:
     @objc fileprivate func handleRefresh(_ sender: UIRefreshControl) {
-        print(#fileID, #function, #line, "- ")
+        print(#fileID, #function, #line, "- 리프레시 됩니다.")
         
         // 뷰모델한테 시키기
         self.todosVM.fetchRefresh()

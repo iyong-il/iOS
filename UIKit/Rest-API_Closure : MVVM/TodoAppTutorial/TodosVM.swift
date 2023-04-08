@@ -12,7 +12,7 @@ class TodosVM {
     // 가공된 최종 데이터
     var todos : [Todo] = [] {
         didSet {
-            print(#fileID, #function, #line, "- ")
+            print(#fileID, #function, #line, "- 가공된 데이터가 표출됩니다.")
             self.notifyTodosChanged?(todos)
         }
     }
@@ -63,7 +63,7 @@ class TodosVM {
     
     var isLoading : Bool = false {
         didSet {
-            print(#fileID, #function, #line, "- ")
+            print(#fileID, #function, #line, "- 로딩중 입니다.")
             notifyLoadingStateChanged?(isLoading)
         }
     }
@@ -178,7 +178,7 @@ class TodosVM {
     
     /// 데이터 리프레시
     func fetchRefresh(){
-        print(#fileID, #function, #line, "- ")
+        print(#fileID, #function, #line, "- 데이터 리프레시")
         self.fetchTodos(page: 1)
     }
     
