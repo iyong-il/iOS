@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MainVC: UIViewController {
 
     // MARK: - 속성
     @IBOutlet weak var contentsLabel: UILabel!
@@ -25,11 +25,12 @@ final class ViewController: UIViewController {
     // MARK: - 메서드
 
     fileprivate func setupUI() {
-        self.detailButton.tintColor = .white
         self.contentsLabel.textColor = .yellow
         self.backView.backgroundColor = .black
+        self.detailButton.tintColor = .white
     }
-    
+
+    // segue에서의 데이터 보내는 방법
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailVC else { return }
 
@@ -43,7 +44,7 @@ final class ViewController: UIViewController {
 }
 
 // MARK: - 확장 / 델리게이트
-extension ViewController : LEDDelegate {
+extension MainVC : LEDDelegate {
 
     func changeContents(text: String?, textColor: UIColor?, bgColor: UIColor?) {
         guard let text = text,

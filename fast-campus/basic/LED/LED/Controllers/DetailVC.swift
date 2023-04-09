@@ -38,11 +38,19 @@ final class DetailVC : UIViewController {
 
 
     // MARK: - 메서드
+    fileprivate func setupUI() {
+        guard let ledText = self.ledText,
+              let textColor = self.textColor,
+              let bgColor = self.bgColor else { return }
+        self.textField.text = ledText
+        self.changeTextColor(textColor)
+        self.changeBackViewColor(bgColor)
+    }
+
     fileprivate func changeTextColor(_ color: UIColor) {
         self.yellowButton.alpha = color == .yellow ? 1 : 0.2
         self.purpleButton.alpha = color == .purple ? 1 : 0.2
         self.greenButton.alpha = color == .green ? 1 : 0.2
-
         self.textColor = color
     }
 
@@ -50,18 +58,7 @@ final class DetailVC : UIViewController {
         self.blackButton.alpha = color == .black ? 1 : 0.2
         self.blueButton.alpha = color == .blue ? 1 : 0.2
         self.orangeButton.alpha = color == .orange ? 1 : 0.2
-
         self.bgColor = color
-    }
-
-    fileprivate func setupUI() {
-        guard let ledText = self.ledText,
-              let textColor = self.textColor,
-              let bgColor = self.bgColor
-        else { return }
-        self.textField.text = ledText
-        self.changeTextColor(textColor)
-        self.changeBackViewColor(bgColor)
     }
 
 }
