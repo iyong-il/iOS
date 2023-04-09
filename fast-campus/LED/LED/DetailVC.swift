@@ -1,0 +1,110 @@
+//
+//  DetailVC.swift
+//  LED
+//
+//  Created by 이용일(Rodi) on 2023/04/09.
+//
+
+import UIKit
+
+protocol LEDDelegate : AnyObject {
+    func changeContents(text: String?, textColor: UIColor?, bgColor: UIColor?)
+}
+
+final class DetailVC : UIViewController {
+
+    // MARK: - 속성
+    @IBOutlet weak var textField: UITextField!
+
+    @IBOutlet weak var yellowButton: UIButton!
+    @IBOutlet weak var purpleButton: UIButton!
+    @IBOutlet weak var greenButton: UIButton!
+
+    @IBOutlet weak var blackButton: UIButton!
+    @IBOutlet weak var blueButton: UIButton!
+    @IBOutlet weak var orangeButton: UIButton!
+
+    weak var delegate: LEDDelegate?
+    var ledText: String?
+    var textColor: UIColor = .yellow
+    var bgColor: UIColor = .black
+
+
+    // MARK: - 라이프사이클
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+
+
+    // MARK: - 메서드
+    fileprivate func changeTextColor(_ color: UIColor) {
+        self.yellowButton.alpha = color == .yellow ? 1 : 0.2
+        self.purpleButton.alpha = color == .purple ? 1 : 0.2
+        self.greenButton.alpha = color == .green ? 1 : 0.2
+    }
+
+    fileprivate func changeBackViewColor(_ color: UIColor) {
+        self.blackButton.alpha = color == .black ? 1 : 0.2
+        self.blueButton.alpha = color == .blue ? 1 : 0.2
+        self.orangeButton.alpha = color == .orange ? 1 : 0.2
+    }
+
+    fileprivate func setupUI() {
+        [purpleButton, greenButton, blueButton, orangeButton].forEach { $0?.alpha = 0.2 }
+
+        guard let ledText = self.ledText else { return }
+        self.textField.text = ledText
+    }
+
+}
+
+// MARK: - 확장 / @IBAction
+extension DetailVC {
+    @IBAction func textButtonPressed(_ sender: UIButton) {
+        guard let sender = sender.currentTitle else { return }
+        print(#fileID, #function, #line, "- textButton - sender : \(sender)")
+
+        switch sender {
+        case "노랑":
+            self.changeTextColor(.yellow)
+            self.textColor = .yellow
+        case "보라":
+            self.changeTextColor(.purple)
+            self.textColor = .purple
+        case "초록":
+            self.changeTextColor(.green)
+            self.textColor = .green
+        default:
+            break
+        }
+
+    }
+
+    @IBAction func backViewButton(_ sender: UIButton) {
+        guard let sender = sender.currentTitle else { return }
+        print(#fileID, #function, #line, "- backViewButton - sender : \(sender)")
+
+        switch sender {
+        case "검정":
+            self.changeBackViewColor(.black)
+            self.bgColor = .black
+        case "파랑":
+            self.changeBackViewColor(.blue)
+            self.bgColor = .blue
+        case "주황":
+            self.changeBackViewColor(.orange)
+            self.bgColor = .orange
+        default:
+            break
+        }
+
+    }
+
+    @IBAction func memoryButton(_ sender: UIButton) {
+        self.delegate?.changeContents(text: self.textField.text, textColor: self.textColor, bgColor: self.bgColor)
+        self.navigationController?.popViewController(animated: true)
+    }
+
+
+}
