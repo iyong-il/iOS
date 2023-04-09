@@ -42,12 +42,16 @@ final class DetailVC : UIViewController {
         self.yellowButton.alpha = color == .yellow ? 1 : 0.2
         self.purpleButton.alpha = color == .purple ? 1 : 0.2
         self.greenButton.alpha = color == .green ? 1 : 0.2
+
+        self.textColor = color
     }
 
     fileprivate func changeBackViewColor(_ color: UIColor) {
         self.blackButton.alpha = color == .black ? 1 : 0.2
         self.blueButton.alpha = color == .blue ? 1 : 0.2
         self.orangeButton.alpha = color == .orange ? 1 : 0.2
+
+        self.bgColor = color
     }
 
     fileprivate func setupUI() {
@@ -71,13 +75,10 @@ extension DetailVC {
         switch sender {
         case "노랑":
             self.changeTextColor(.yellow)
-            self.textColor = .yellow
         case "보라":
             self.changeTextColor(.purple)
-            self.textColor = .purple
         case "초록":
             self.changeTextColor(.green)
-            self.textColor = .green
         default:
             break
         }
@@ -91,13 +92,10 @@ extension DetailVC {
         switch sender {
         case "검정":
             self.changeBackViewColor(.black)
-            self.bgColor = .black
         case "파랑":
             self.changeBackViewColor(.blue)
-            self.bgColor = .blue
         case "주황":
             self.changeBackViewColor(.orange)
-            self.bgColor = .orange
         default:
             break
         }
