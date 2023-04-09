@@ -26,8 +26,8 @@ final class DetailVC : UIViewController {
 
     weak var delegate: LEDDelegate?
     var ledText: String?
-    var textColor: UIColor = .yellow
-    var bgColor: UIColor = .black
+    var textColor: UIColor?
+    var bgColor: UIColor?
 
 
     // MARK: - 라이프사이클
@@ -51,10 +51,13 @@ final class DetailVC : UIViewController {
     }
 
     fileprivate func setupUI() {
-        [purpleButton, greenButton, blueButton, orangeButton].forEach { $0?.alpha = 0.2 }
-
-        guard let ledText = self.ledText else { return }
+        guard let ledText = self.ledText,
+              let textColor = self.textColor,
+              let bgColor = self.bgColor
+        else { return }
         self.textField.text = ledText
+        self.changeTextColor(textColor)
+        self.changeBackViewColor(bgColor)
     }
 
 }

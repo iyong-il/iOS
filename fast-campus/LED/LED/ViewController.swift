@@ -18,19 +18,26 @@ final class ViewController: UIViewController {
     // MARK: - 라이프사이클
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.detailButton.tintColor = .white
+        setupUI()
     }
 
 
     // MARK: - 메서드
+
+    fileprivate func setupUI() {
+        self.detailButton.tintColor = .white
+        self.contentsLabel.textColor = .yellow
+        self.backView.backgroundColor = .black
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailVC else { return }
 
         detailVC.delegate = self
 
         detailVC.ledText = self.contentsLabel.text ?? ""
-        detailVC.textColor = self.contentsLabel.textColor ?? .yellow
-        detailVC.bgColor = self.backView.backgroundColor ?? .black
+        detailVC.textColor = self.contentsLabel.textColor
+        detailVC.bgColor = self.backView.backgroundColor
     }
 
 }
