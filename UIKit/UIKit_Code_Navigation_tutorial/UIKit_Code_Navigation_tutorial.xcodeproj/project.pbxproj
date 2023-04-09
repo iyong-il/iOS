@@ -53,19 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B117588129C6F9D9001A8776 /* ViewControllers */ = {
+		B117588129C6F9D9001A8776 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				B125F53529B5F86D00C4BA2D /* FirstVC.swift */,
-				B125F53729B5F86D00C4BA2D /* Main.storyboard */,
 				B117587729C6F35A001A8776 /* SecondVC.swift */,
-				B117587129C6F33B001A8776 /* SecondVC.storyboard */,
 				B117587929C6F372001A8776 /* ThirdVC.swift */,
-				B117587329C6F343001A8776 /* ThirdVC.storyboard */,
 				B117587B29C6F38D001A8776 /* DetailVC.swift */,
-				B117587529C6F34C001A8776 /* DetailVC.storyboard */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B117588229C6FA00001A8776 /* Extensions */ = {
@@ -107,12 +103,32 @@
 				B125F53329B5F86D00C4BA2D /* SceneDelegate.swift */,
 				B117588329C6FA0A001A8776 /* Utils */,
 				B117588229C6FA00001A8776 /* Extensions */,
-				B117588129C6F9D9001A8776 /* ViewControllers */,
+				B172EFA929E2FE060033FC33 /* Views */,
+				B117588129C6F9D9001A8776 /* Controllers */,
 				B125F53A29B5F86D00C4BA2D /* Assets.xcassets */,
 				B125F53C29B5F86D00C4BA2D /* LaunchScreen.storyboard */,
 				B125F53F29B5F86D00C4BA2D /* Info.plist */,
 			);
 			path = UIKit_Code_Navigation_tutorial;
+			sourceTree = "<group>";
+		};
+		B172EFA929E2FE060033FC33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B172EFAA29E2FE0E0033FC33 /* Storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B172EFAA29E2FE0E0033FC33 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B125F53729B5F86D00C4BA2D /* Main.storyboard */,
+				B117587129C6F33B001A8776 /* SecondVC.storyboard */,
+				B117587329C6F343001A8776 /* ThirdVC.storyboard */,
+				B117587529C6F34C001A8776 /* DetailVC.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
