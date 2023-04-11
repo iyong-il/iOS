@@ -52,6 +52,10 @@ final class ViewController: UIViewController {
                     break
                 }
 
+                if let result = Double(self.result), result.truncatingRemainder(dividingBy: 1) == 0 {
+                    self.result = "\(Int(result))"
+                }
+
                 self.firstNum = self.result
                 self.numberLabel.text = self.result
 
