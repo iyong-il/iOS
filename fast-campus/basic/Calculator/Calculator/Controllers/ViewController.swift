@@ -16,7 +16,7 @@ final class ViewController: UIViewController {
     var firstNum = ""
     var secondNum = ""
     var result = ""
-    var current: Operation = .UnKnown
+    var current: Operation = .unKnown
 
 
     // MARK: - 라이프사이클
@@ -30,7 +30,7 @@ final class ViewController: UIViewController {
     // 계산메서드
     fileprivate func operation(_ operation: Operation) {
 
-        if self.current != .UnKnown {
+        if self.current != .unKnown {
 
             if !self.displayNumber.isEmpty {
                 self.secondNum = self.displayNumber
@@ -40,13 +40,13 @@ final class ViewController: UIViewController {
                       let second = Double(self.secondNum) else { return }
 
                 switch self.current {
-                case .Add:
+                case .add:
                     self.result = "\(first + second)"
-                case .Subtract:
+                case .subtract:
                     self.result = "\(first - second)"
-                case .Multiply:
+                case .multiply:
                     self.result = "\(first * second)"
-                case .Divide:
+                case .divide:
                     self.result = "\(first / second)"
                 default:
                     break
@@ -98,7 +98,7 @@ extension ViewController {
         self.firstNum.removeAll()
         self.secondNum.removeAll()
         self.result.removeAll()
-        self.current = .UnKnown
+        self.current = .unKnown
     }
 
     @IBAction func dotButtonTapped(_ sender: UIButton) {
@@ -114,15 +114,15 @@ extension ViewController {
 
         switch sender {
         case "/":
-            self.operation(.Divide)
+            self.operation(.divide)
         case "*":
-            self.operation(.Multiply)
+            self.operation(.multiply)
         case "+":
-            self.operation(.Add)
+            self.operation(.add)
         case "-":
-            self.operation(.Subtract)
+            self.operation(.subtract)
         default:
-            self.operation(.UnKnown)
+            self.operation(.unKnown)
         }
 
     }

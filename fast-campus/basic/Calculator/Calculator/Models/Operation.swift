@@ -8,9 +8,9 @@
 import Foundation
 
 enum Operation {
-    case Add
-    case Subtract
-    case Divide
-    case Multiply
-    case UnKnown
+    case add
+    case subtract
+    case divide
+    case multiply
+    case unKnown
 }
