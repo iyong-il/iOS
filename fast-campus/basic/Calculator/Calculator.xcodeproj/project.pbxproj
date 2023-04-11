@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B17925B329E57E13000C758F /* ConerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17925B229E57E13000C758F /* ConerRadius.swift */; };
+		B17925B529E580CB000C758F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17925B429E580CB000C758F /* Operation.swift */; };
 		B1911B1329E42C690094BC53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1911B1229E42C690094BC53 /* AppDelegate.swift */; };
 		B1911B1529E42C690094BC53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1911B1429E42C690094BC53 /* SceneDelegate.swift */; };
 		B1911B1729E42C690094BC53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1911B1629E42C690094BC53 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B17925B229E57E13000C758F /* ConerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConerRadius.swift; sourceTree = "<group>"; };
+		B17925B429E580CB000C758F /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		B1911B0F29E42C690094BC53 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1911B1229E42C690094BC53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1911B1429E42C690094BC53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				B1911B1B29E42C6A0094BC53 /* Assets.xcassets */,
 				B1911B1D29E42C6A0094BC53 /* LaunchScreen.storyboard */,
 				B1911B2029E42C6A0094BC53 /* Info.plist */,
+				B17925B229E57E13000C758F /* ConerRadius.swift */,
+				B17925B429E580CB000C758F /* Operation.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				B1911B1729E42C690094BC53 /* ViewController.swift in Sources */,
 				B1911B1329E42C690094BC53 /* AppDelegate.swift in Sources */,
 				B1911B1529E42C690094BC53 /* SceneDelegate.swift in Sources */,
+				B17925B529E580CB000C758F /* Operation.swift in Sources */,
+				B17925B329E57E13000C758F /* ConerRadius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
